@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as CategoriesRouteImport } from './routes/categories'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as QuizSlugRouteImport } from './routes/quiz.$slug'
 import { Route as CategorySlugRouteImport } from './routes/category.$slug'
 
 const CategoriesRoute = CategoriesRouteImport.update({
@@ -23,6 +24,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const QuizSlugRoute = QuizSlugRouteImport.update({
+  id: '/quiz/$slug',
+  path: '/quiz/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CategorySlugRoute = CategorySlugRouteImport.update({
   id: '/category/$slug',
   path: '/category/$slug',
@@ -33,30 +39,34 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/categories': typeof CategoriesRoute
   '/category/$slug': typeof CategorySlugRoute
+  '/quiz/$slug': typeof QuizSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/categories': typeof CategoriesRoute
   '/category/$slug': typeof CategorySlugRoute
+  '/quiz/$slug': typeof QuizSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/categories': typeof CategoriesRoute
   '/category/$slug': typeof CategorySlugRoute
+  '/quiz/$slug': typeof QuizSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/categories' | '/category/$slug'
+  fullPaths: '/' | '/categories' | '/category/$slug' | '/quiz/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/categories' | '/category/$slug'
-  id: '__root__' | '/' | '/categories' | '/category/$slug'
+  to: '/' | '/categories' | '/category/$slug' | '/quiz/$slug'
+  id: '__root__' | '/' | '/categories' | '/category/$slug' | '/quiz/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CategoriesRoute: typeof CategoriesRoute
   CategorySlugRoute: typeof CategorySlugRoute
+  QuizSlugRoute: typeof QuizSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -75,6 +85,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/quiz/$slug': {
+      id: '/quiz/$slug'
+      path: '/quiz/$slug'
+      fullPath: '/quiz/$slug'
+      preLoaderRoute: typeof QuizSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/category/$slug': {
       id: '/category/$slug'
       path: '/category/$slug'
@@ -89,6 +106,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CategoriesRoute: CategoriesRoute,
   CategorySlugRoute: CategorySlugRoute,
+  QuizSlugRoute: QuizSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
