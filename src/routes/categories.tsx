@@ -1,16 +1,15 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
-import { categories } from "@/data/categories";
-import { questionsByCategory } from "@/data/questions";
+import { groups, categoriesByGroup } from "@/data/categories";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export const Route = createFileRoute("/categories")({
   head: () => ({
     meta: [
-      { title: "All Categories — QuizMaster" },
-      { name: "description", content: "Browse all MCQ practice categories: Linux, AWS, Networking, DevOps, Docker, Kubernetes and more." },
-      { property: "og:title", content: "All Categories — QuizMaster" },
-      { property: "og:description", content: "Browse all MCQ practice categories on QuizMaster." },
+      { title: "All Groups — QuizMaster" },
+      { name: "description", content: "Browse MCQ practice groups. Pick a group to see its categories." },
+      { property: "og:title", content: "All Groups — QuizMaster" },
+      { property: "og:description", content: "Browse MCQ practice groups on QuizMaster." },
     ],
   }),
   component: CategoriesPage,
@@ -19,23 +18,23 @@ export const Route = createFileRoute("/categories")({
 function CategoriesPage() {
   return (
     <PageShell>
-      <h1 className="text-2xl font-bold mb-6">All Categories</h1>
+      <h1 className="text-2xl font-bold mb-6">All Groups</h1>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {categories.map((c) => {
-          const count = questionsByCategory(c.slug).length;
+        {groups.map((g) => {
+          const count = categoriesByGroup(g.slug).length;
           return (
-            <Link key={c.slug} to="/category/$slug" params={{ slug: c.slug }}>
+            <Link key={g.slug} to="/group/$slug" params={{ slug: g.slug }}>
               <Card className="h-full transition hover:border-primary hover:shadow-md">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-lg">
-                    <span className="text-2xl" aria-hidden>{c.icon}</span>
-                    {c.name}
+                    <span className="text-2xl" aria-hidden>{g.icon}</span>
+                    {g.name}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="text-sm text-muted-foreground">
-                  <p>{c.description}</p>
+                  <p>{g.description}</p>
                   <p className="mt-2 text-xs font-medium text-primary">
-                    {count} question{count === 1 ? "" : "s"} available
+                    {count} categor{count === 1 ? "y" : "ies"}
                   </p>
                 </CardContent>
               </Card>

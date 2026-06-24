@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
-import { categories } from "@/data/categories";
+import { groups, categoriesByGroup } from "@/data/categories";
 import { allQuestions } from "@/data/questions";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -33,35 +33,41 @@ function Index() {
         </p>
         <div className="mt-5 flex gap-3">
           <Button asChild size="lg">
-            <Link to="/category/$slug" params={{ slug: "linux" }}>Start with Linux</Link>
+            <Link to="/group/$slug" params={{ slug: "it" }}>Explore IT</Link>
           </Button>
           <Button asChild size="lg" variant="outline">
-            <Link to="/categories">Browse all categories</Link>
+            <Link to="/categories">Browse all groups</Link>
           </Button>
         </div>
       </section>
 
       <section className="mb-10">
         <div className="flex items-baseline justify-between mb-4">
-          <h2 className="text-xl font-semibold">Popular Categories</h2>
+          <h2 className="text-xl font-semibold">Browse by Group</h2>
           <Link to="/categories" className="text-sm text-primary hover:underline">View all</Link>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {categories.slice(0, 6).map((c) => (
-            <Link key={c.slug} to="/category/$slug" params={{ slug: c.slug }}>
-              <Card className="h-full transition hover:border-primary hover:shadow-md">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2 text-lg">
-                    <span className="text-2xl" aria-hidden>{c.icon}</span>
-                    {c.name}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="text-sm text-muted-foreground">
-                  {c.description}
-                </CardContent>
-              </Card>
-            </Link>
-          ))}
+          {groups.map((g) => {
+            const count = categoriesByGroup(g.slug).length;
+            return (
+              <Link key={g.slug} to="/group/$slug" params={{ slug: g.slug }}>
+                <Card className="h-full transition hover:border-primary hover:shadow-md">
+                  <CardHeader>
+                    <CardTitle className="flex items-center gap-2 text-lg">
+                      <span className="text-2xl" aria-hidden>{g.icon}</span>
+                      {g.name}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-sm text-muted-foreground">
+                    <p>{g.description}</p>
+                    <p className="mt-2 text-xs font-medium text-primary">
+                      {count} categor{count === 1 ? "y" : "ies"}
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
+            );
+          })}
         </div>
       </section>
 

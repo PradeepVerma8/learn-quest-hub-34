@@ -37,7 +37,7 @@ export function SiteHeader() {
             <Link to="/">Home</Link>
           </Button>
           <Button variant="ghost" asChild>
-            <Link to="/categories">Categories</Link>
+            <Link to="/categories">Groups</Link>
           </Button>
         </nav>
       </div>

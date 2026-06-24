@@ -14,6 +14,7 @@ import { Route as SearchRouteImport } from './routes/search'
 import { Route as CategoriesRouteImport } from './routes/categories'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as QuizSlugRouteImport } from './routes/quiz.$slug'
+import { Route as GroupSlugRouteImport } from './routes/group.$slug'
 import { Route as CategorySlugRouteImport } from './routes/category.$slug'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -41,6 +42,11 @@ const QuizSlugRoute = QuizSlugRouteImport.update({
   path: '/quiz/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GroupSlugRoute = GroupSlugRouteImport.update({
+  id: '/group/$slug',
+  path: '/group/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CategorySlugRoute = CategorySlugRouteImport.update({
   id: '/category/$slug',
   path: '/category/$slug',
@@ -53,6 +59,7 @@ export interface FileRoutesByFullPath {
   '/search': typeof SearchRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/category/$slug': typeof CategorySlugRoute
+  '/group/$slug': typeof GroupSlugRoute
   '/quiz/$slug': typeof QuizSlugRoute
 }
 export interface FileRoutesByTo {
@@ -61,6 +68,7 @@ export interface FileRoutesByTo {
   '/search': typeof SearchRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/category/$slug': typeof CategorySlugRoute
+  '/group/$slug': typeof GroupSlugRoute
   '/quiz/$slug': typeof QuizSlugRoute
 }
 export interface FileRoutesById {
@@ -70,6 +78,7 @@ export interface FileRoutesById {
   '/search': typeof SearchRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/category/$slug': typeof CategorySlugRoute
+  '/group/$slug': typeof GroupSlugRoute
   '/quiz/$slug': typeof QuizSlugRoute
 }
 export interface FileRouteTypes {
@@ -80,6 +89,7 @@ export interface FileRouteTypes {
     | '/search'
     | '/sitemap.xml'
     | '/category/$slug'
+    | '/group/$slug'
     | '/quiz/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -88,6 +98,7 @@ export interface FileRouteTypes {
     | '/search'
     | '/sitemap.xml'
     | '/category/$slug'
+    | '/group/$slug'
     | '/quiz/$slug'
   id:
     | '__root__'
@@ -96,6 +107,7 @@ export interface FileRouteTypes {
     | '/search'
     | '/sitemap.xml'
     | '/category/$slug'
+    | '/group/$slug'
     | '/quiz/$slug'
   fileRoutesById: FileRoutesById
 }
@@ -105,6 +117,7 @@ export interface RootRouteChildren {
   SearchRoute: typeof SearchRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   CategorySlugRoute: typeof CategorySlugRoute
+  GroupSlugRoute: typeof GroupSlugRoute
   QuizSlugRoute: typeof QuizSlugRoute
 }
 
@@ -145,6 +158,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof QuizSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/group/$slug': {
+      id: '/group/$slug'
+      path: '/group/$slug'
+      fullPath: '/group/$slug'
+      preLoaderRoute: typeof GroupSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/category/$slug': {
       id: '/category/$slug'
       path: '/category/$slug'
@@ -161,6 +181,7 @@ const rootRouteChildren: RootRouteChildren = {
   SearchRoute: SearchRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   CategorySlugRoute: CategorySlugRoute,
+  GroupSlugRoute: GroupSlugRoute,
   QuizSlugRoute: QuizSlugRoute,
 }
 export const routeTree = rootRouteImport
