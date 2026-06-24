@@ -6,9 +6,9 @@ import { getCategory } from "@/data/categories";
 
 export const Route = createFileRoute("/search")({
   validateSearch: z.object({ q: z.string().optional() }),
-  head: ({ search }) => ({
+  head: () => ({
     meta: [
-      { title: search.q ? `Search: ${search.q} — QuizMaster` : "Search — QuizMaster" },
+      { title: "Search — QuizMaster" },
       { name: "description", content: "Search MCQ questions across all categories." },
     ],
   }),

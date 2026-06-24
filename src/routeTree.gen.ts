@@ -9,11 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SearchRouteImport } from './routes/search'
 import { Route as CategoriesRouteImport } from './routes/categories'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as QuizSlugRouteImport } from './routes/quiz.$slug'
 import { Route as CategorySlugRouteImport } from './routes/category.$slug'
 
+const SearchRoute = SearchRouteImport.update({
+  id: '/search',
+  path: '/search',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CategoriesRoute = CategoriesRouteImport.update({
   id: '/categories',
   path: '/categories',
@@ -38,12 +44,14 @@ const CategorySlugRoute = CategorySlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/categories': typeof CategoriesRoute
+  '/search': typeof SearchRoute
   '/category/$slug': typeof CategorySlugRoute
   '/quiz/$slug': typeof QuizSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/categories': typeof CategoriesRoute
+  '/search': typeof SearchRoute
   '/category/$slug': typeof CategorySlugRoute
   '/quiz/$slug': typeof QuizSlugRoute
 }
@@ -51,26 +59,41 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/categories': typeof CategoriesRoute
+  '/search': typeof SearchRoute
   '/category/$slug': typeof CategorySlugRoute
   '/quiz/$slug': typeof QuizSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/categories' | '/category/$slug' | '/quiz/$slug'
+  fullPaths: '/' | '/categories' | '/search' | '/category/$slug' | '/quiz/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/categories' | '/category/$slug' | '/quiz/$slug'
-  id: '__root__' | '/' | '/categories' | '/category/$slug' | '/quiz/$slug'
+  to: '/' | '/categories' | '/search' | '/category/$slug' | '/quiz/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/categories'
+    | '/search'
+    | '/category/$slug'
+    | '/quiz/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CategoriesRoute: typeof CategoriesRoute
+  SearchRoute: typeof SearchRoute
   CategorySlugRoute: typeof CategorySlugRoute
   QuizSlugRoute: typeof QuizSlugRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/search': {
+      id: '/search'
+      path: '/search'
+      fullPath: '/search'
+      preLoaderRoute: typeof SearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/categories': {
       id: '/categories'
       path: '/categories'
@@ -105,6 +128,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CategoriesRoute: CategoriesRoute,
+  SearchRoute: SearchRoute,
   CategorySlugRoute: CategorySlugRoute,
   QuizSlugRoute: QuizSlugRoute,
 }
