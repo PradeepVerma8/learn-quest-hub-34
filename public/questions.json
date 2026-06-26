@@ -1,202 +1,222 @@
-[
-  {
-    "question": "Which layer of the OSI model is responsible for data encryption and decryption?",
-    "options": [
-      "Presentation Layer",
-      "Session Layer",
-      "Transport Layer",
-      "Application Layer"
-    ],
-    "answer": "Presentation Layer"
-  },
-  {
-    "question": "At which layer of the TCP/IP model does the IP protocol operate?",
-    "options": [
-      "Application Layer",
-      "Transport Layer",
-      "Internet Layer",
-      "Network Access Layer"
-    ],
-    "answer": "Internet Layer"
-  },
-  {
-    "question": "Which network device operates at the Network Layer (Layer 3) of the OSI model and forwards data packets between different computer networks?",
-    "options": [
-      "Hub",
-      "Switch",
-      "Router",
-      "Repeater"
-    ],
-    "answer": "Router"
-  },
-  {
-    "question": "Which transport layer protocol provides a connection-oriented, reliable, and ordered byte stream delivery?",
-    "options": [
-      "UDP",
-      "TCP",
-      "IP",
-      "ICMP"
-    ],
-    "answer": "TCP"
-  },
-  {
-    "question": "Which transport layer protocol is connectionless and provides unreliable data transfer?",
-    "options": [
-      "TCP",
-      "UDP",
-      "SMTP",
-      "FTP"
-    ],
-    "answer": "UDP"
-  },
-  {
-    "question": "A MAC address is a hardware address that uniquely identifies a network interface card (NIC). How many bits long is a standard MAC address?",
-    "options": [
-      "16 bits",
-      "32 bits",
-      "48 bits",
-      "64 bits"
-    ],
-    "answer": "48 bits"
-  },
-  {
-    "question": "Which version of the Internet Protocol uses 128-bit addresses?",
-    "options": [
-      "IPv4",
-      "IPv6",
-      "ARP",
-      "RARP"
-    ],
-    "answer": "IPv6"
-  },
-  {
-    "question": "Which protocol is used to resolve domain names (like www.example.com) into IP addresses?",
-    "options": [
-      "DHCP",
-      "DNS",
-      "SMTP",
-      "POP3"
-    ],
-    "answer": "DNS"
-  },
-  {
-    "question": "A network that spans a large geographical area, such as across cities or countries, is called a:",
-    "options": [
-      "LAN",
-      "MAN",
-      "WAN",
-      "PAN"
-    ],
-    "answer": "WAN"
-  },
-  {
-    "question": "In which network topology do all devices connect to a central hub or switch?",
-    "options": [
-      "Bus Topology",
-      "Ring Topology",
-      "Star Topology",
-      "Mesh Topology"
-    ],
-    "answer": "Star Topology"
-  },
-  {
-    "question": "What is the primary purpose of a firewall in a network?",
-    "options": [
-      "To speed up network traffic",
-      "To filter network traffic and prevent unauthorized access",
-      "To amplify wireless signals",
-      "To convert analog signals to digital"
-    ],
-    "answer": "To filter network traffic and prevent unauthorized access"
-  },
-  {
-    "question": "Which network device operates at the Data Link Layer (Layer 2) of the OSI model and forwards frames based on MAC addresses?",
-    "options": [
-      "Hub",
-      "Router",
-      "Switch",
-      "Repeater"
-    ],
-    "answer": "Switch"
-  },
-  {
-    "question": "Which protocol is primarily used for sending email messages from a client to a server or between servers?",
-    "options": [
-      "POP3",
-      "IMAP",
-      "SMTP",
-      "HTTP"
-    ],
-    "answer": "SMTP"
-  },
-  {
-    "question": "Which protocol dynamically assigns IP addresses to devices on a network?",
-    "options": [
-      "DNS",
-      "FTP",
-      "DHCP",
-      "HTTP"
-    ],
-    "answer": "DHCP"
-  },
-  {
-    "question": "What is the data unit at the Network Layer of the OSI model?",
-    "options": [
-      "Segment",
-      "Frame",
-      "Packet",
-      "Bit"
-    ],
-    "answer": "Packet"
-  },
-  {
-    "question": "In which type of communication is a single message sent to all devices on a network segment?",
-    "options": [
-      "Unicast",
-      "Multicast",
-      "Broadcast",
-      "Anycast"
-    ],
-    "answer": "Broadcast"
-  },
-  {
-    "question": "What is the standard port number used by the HTTP protocol?",
-    "options": [
-      "21",
-      "23",
-      "80",
-      "443"
-    ],
-    "answer": "80"
-  },
-  {
-    "question": "What is the standard port number used by the HTTPS protocol?",
-    "options": [
-      "80",
-      "110",
-      "143",
-      "443"
-    ],
-    "answer": "443"
-  },
-  {
-    "question": "What term describes the maximum rate at which data can be transferred over a network connection?",
-    "options": [
-      "Latency",
-      "Throughput",
-      "Bandwidth",
-      "Jitter"
-    ],
-    "answer": "Bandwidth"
-  },
-  {
-    "question": "What is the purpose of the Address Resolution Protocol (ARP)?",
-    "options": [
-      "To resolve IP addresses to domain names",
-      "To resolve MAC addresses to IP addresses",
-      "To resolve IP addresses to MAC addresses",
-      "To resolve port numbers to service names"
-    ],
-    "answer": "To resolve IP addresses to MAC addresses"
-  }
-]
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the primary function of a router?",
+      "options": [
+        "To connect devices within a single local area network (LAN).",
+        "To filter network traffic based on MAC addresses.",
+        "To forward data packets between different computer networks.",
+        "To provide wireless connectivity to devices."
+      ],
+      "correct_answer": "To forward data packets between different computer networks."
+    },
+    {
+      "id": 2,
+      "question": "Which OSI layer is responsible for converting data packets into frames and handling physical addressing (MAC addresses)?",
+      "options": [
+        "Application Layer",
+        "Network Layer",
+        "Data Link Layer",
+        "Transport Layer"
+      ],
+      "correct_answer": "Data Link Layer"
+    },
+    {
+      "id": 3,
+      "question": "What protocol is primarily used by web browsers to request and display web pages?",
+      "options": [
+        "FTP",
+        "SMTP",
+        "HTTP",
+        "DNS"
+      ],
+      "correct_answer": "HTTP"
+    },
+    {
+      "id": 4,
+      "question": "Which of the following is a connection-oriented protocol that guarantees reliable delivery of data?",
+      "options": [
+        "UDP",
+        "ICMP",
+        "TCP",
+        "ARP"
+      ],
+      "correct_answer": "TCP"
+    },
+    {
+      "id": 5,
+      "question": "What is the main purpose of the Domain Name System (DNS)?",
+      "options": [
+        "To assign IP addresses to devices automatically.",
+        "To encrypt data transmitted over the internet.",
+        "To translate human-readable domain names into IP addresses.",
+        "To manage network traffic flow."
+      ],
+      "correct_answer": "To translate human-readable domain names into IP addresses."
+    },
+    {
+      "id": 6,
+      "question": "An IP address in the range 192.168.0.0 to 192.168.255.255 typically belongs to which type of network?",
+      "options": [
+        "Public IP address",
+        "Multicast IP address",
+        "Private IP address",
+        "Broadcast IP address"
+      ],
+      "correct_answer": "Private IP address"
+    },
+    {
+      "id": 7,
+      "question": "What networking device operates at Layer 2 (Data Link Layer) of the OSI model and forwards frames based on MAC addresses?",
+      "options": [
+        "Router",
+        "Hub",
+        "Switch",
+        "Modem"
+      ],
+      "correct_answer": "Switch"
+    },
+    {
+      "id": 8,
+      "question": "Port number 443 is commonly associated with which secure communication protocol?",
+      "options": [
+        "HTTP",
+        "FTP",
+        "HTTPS",
+        "SMTP"
+      ],
+      "correct_answer": "HTTPS"
+    },
+    {
+      "id": 9,
+      "question": "Which protocol is used to dynamically assign IP addresses to client devices on a network?",
+      "options": [
+        "ARP",
+        "DHCP",
+        "DNS",
+        "ICMP"
+      ],
+      "correct_answer": "DHCP"
+    },
+    {
+      "id": 10,
+      "question": "What is the purpose of the Address Resolution Protocol (ARP)?",
+      "options": [
+        "To translate domain names to IP addresses.",
+        "To resolve an IP address to a MAC address.",
+        "To establish a secure connection between two devices.",
+        "To provide error reporting for IP packet delivery."
+      ],
+      "correct_answer": "To resolve an IP address to a MAC address."
+    },
+    {
+      "id": 11,
+      "question": "The subnet mask is used to determine which portion of an IP address represents the network ID and which represents the host ID. True or False?",
+      "options": [
+        "True",
+        "False"
+      ],
+      "correct_answer": "True"
+    },
+    {
+      "id": 12,
+      "question": "Which device acts as a barrier between a trusted internal network and an untrusted external network, controlling incoming and outgoing network traffic?",
+      "options": [
+        "Switch",
+        "Router",
+        "Firewall",
+        "Access Point"
+      ],
+      "correct_answer": "Firewall"
+    },
+    {
+      "id": 13,
+      "question": "How many bits are in an IPv6 address?",
+      "options": [
+        "32 bits",
+        "64 bits",
+        "128 bits",
+        "256 bits"
+      ],
+      "correct_answer": "128 bits"
+    },
+    {
+      "id": 14,
+      "question": "What does VPN stand for?",
+      "options": [
+        "Virtual Private Network",
+        "Very Personal Network",
+        "Voice over Public Network",
+        "Verified Private Node"
+      ],
+      "correct_answer": "Virtual Private Network"
+    },
+    {
+      "id": 15,
+      "question": "In a star network topology, all devices are connected to a central device. What is this central device typically called?",
+      "options": [
+        "Node",
+        "Endpoint",
+        "Hub or Switch",
+        "Server"
+      ],
+      "correct_answer": "Hub or Switch"
+    },
+    {
+      "id": 16,
+      "question": "What is the maximum theoretical speed for a Fast Ethernet connection?",
+      "options": [
+        "10 Mbps",
+        "100 Mbps",
+        "1 Gbps",
+        "10 Gbps"
+      ],
+      "correct_answer": "100 Mbps"
+    },
+    {
+      "id": 17,
+      "question": "Which network type spans a large geographical area, often connecting multiple smaller networks (like LANs)?",
+      "options": [
+        "LAN",
+        "MAN",
+        "WAN",
+        "PAN"
+      ],
+      "correct_answer": "WAN"
+    },
+    {
+      "id": 18,
+      "question": "What is the primary difference between a hub and a switch?",
+      "options": [
+        "A hub filters traffic, while a switch broadcasts all traffic.",
+        "A hub works at Layer 3, while a switch works at Layer 2.",
+        "A hub broadcasts data to all connected devices, while a switch forwards data only to the intended recipient.",
+        "A hub is faster than a switch."
+      ],
+      "correct_answer": "A hub broadcasts data to all connected devices, while a switch forwards data only to the intended recipient."
+    },
+    {
+      "id": 19,
+      "question": "What is a MAC address used for?",
+      "options": [
+        "Identifying a computer's location on the internet.",
+        "Logically identifying a device on a network (Layer 3).",
+        "Physically identifying a network interface card (NIC) on a local network (Layer 2).",
+        "Encrypting data packets."
+      ],
+      "correct_answer": "Physically identifying a network interface card (NIC) on a local network (Layer 2)."
+    },
+    {
+      "id": 20,
+      "question": "Which of the following is NOT a layer in the TCP/IP model?",
+      "options": [
+        "Application Layer",
+        "Transport Layer",
+        "Presentation Layer",
+        "Network Access Layer"
+      ],
+      "correct_answer": "Presentation Layer"
+    }
+  ]
+}
