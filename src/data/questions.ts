@@ -61,9 +61,154 @@ const aws: Question[] = [
   { id: "aw-23", category: "aws", question: "Which service is a managed data warehouse?", options: ["RDS", "Aurora", "Redshift", "Athena"], correctIndex: 2, explanation: "Amazon Redshift is the managed petabyte-scale data warehouse." },
   { id: "aw-24", category: "aws", question: "Which IAM entity is best for granting EC2 access to S3?", options: ["IAM user", "IAM group", "IAM role", "Access key"], correctIndex: 2, explanation: "Attach an IAM role to the EC2 instance — no static credentials." },
   { id: "aw-25", category: "aws", question: "Which service provides DDoS protection?", options: ["WAF", "Shield", "GuardDuty", "Inspector"], correctIndex: 1, explanation: "AWS Shield provides managed DDoS protection; Shield Advanced adds extra." },
+  
+];
+const networking: Question[] = [
+  {
+    id: "nw-1",
+    category: "networking",
+    question: "What does IP stand for?",
+    options: [
+      "Internet Protocol",
+      "Internal Protocol",
+      "Internet Program",
+      "Internal Program",
+    ],
+    correctIndex: 0,
+    explanation: "IP stands for Internet Protocol.",
+  },
+  {
+    id: "nw-2",
+    category: "networking",
+    question: "Which device connects multiple networks together?",
+    options: ["Switch", "Hub", "Router", "Repeater"],
+    correctIndex: 2,
+    explanation:
+      "A router connects different networks and forwards packets.",
+  },
+  {
+    id: "nw-3",
+    category: "networking",
+    question: "Which protocol automatically assigns IP addresses?",
+    options: ["DNS", "DHCP", "FTP", "SMTP"],
+    correctIndex: 1,
+    explanation:
+      "DHCP automatically assigns IP addresses to devices.",
+  },
+  {
+    id: "nw-4",
+    category: "networking",
+    question: "What is the default port number of HTTP?",
+    options: ["21", "25", "80", "443"],
+    correctIndex: 2,
+    explanation: "HTTP uses port 80 by default.",
+  },
+  {
+    id: "nw-5",
+    category: "networking",
+    question: "What is the default port number of HTTPS?",
+    options: ["80", "110", "443", "3389"],
+    correctIndex: 2,
+    explanation: "HTTPS uses port 443 by default.",
+  },
+  {
+    id: "nw-6",
+    category: "networking",
+    question: "What does DNS stand for?",
+    options: [
+      "Domain Name System",
+      "Data Name System",
+      "Dynamic Network Service",
+      "Domain Network Service",
+    ],
+    correctIndex: 0,
+    explanation: "DNS translates domain names into IP addresses.",
+  },
+  {
+    id: "nw-7",
+    category: "networking",
+    question: "What does LAN stand for?",
+    options: [
+      "Local Area Network",
+      "Large Area Network",
+      "Logical Area Network",
+      "Limited Area Network",
+    ],
+    correctIndex: 0,
+    explanation: "LAN stands for Local Area Network.",
+  },
+  {
+    id: "nw-8",
+    category: "networking",
+    question: "What does WAN stand for?",
+    options: [
+      "Wide Area Network",
+      "Wireless Area Network",
+      "Web Area Network",
+      "World Area Network",
+    ],
+    correctIndex: 0,
+    explanation: "WAN stands for Wide Area Network.",
+  },
+  {
+    id: "nw-9",
+    category: "networking",
+    question: "Which OSI layer is responsible for routing?",
+    options: ["Transport", "Network", "Session", "Data Link"],
+    correctIndex: 1,
+    explanation: "The Network layer (Layer 3) is responsible for routing.",
+  },
+  {
+    id: "nw-10",
+    category: "networking",
+    question: "Which command checks network connectivity?",
+    options: ["ping", "ipconfig", "tracert", "netstat"],
+    correctIndex: 0,
+    explanation: "The ping command checks network connectivity.",
+  },
+  {
+    id: "nw-11",
+    category: "networking",
+    question: "Which protocol is used to send emails?",
+    options: ["FTP", "SMTP", "POP3", "IMAP"],
+    correctIndex: 1,
+    explanation: "SMTP is used to send emails.",
+  },
+  {
+    id: "nw-12",
+    category: "networking",
+    question: "Which command displays IP configuration on Windows?",
+    options: ["ifconfig", "ping", "ipconfig", "netstat"],
+    correctIndex: 2,
+    explanation: "`ipconfig` displays IP configuration on Windows.",
+  },
+  {
+    id: "nw-13",
+    category: "networking",
+    question: "Which protocol is used for file transfer?",
+    options: ["HTTP", "SMTP", "FTP", "SNMP"],
+    correctIndex: 2,
+    explanation: "FTP is used to transfer files.",
+  },
+  {
+    id: "nw-14",
+    category: "networking",
+    question: "What is the default port number of DNS?",
+    options: ["25", "53", "80", "443"],
+    correctIndex: 1,
+    explanation: "DNS uses port 53.",
+  },
+  {
+    id: "nw-15",
+    category: "networking",
+    question: "What is the default port number of SSH?",
+    options: ["21", "22", "23", "25"],
+    correctIndex: 1,
+    explanation: "SSH uses port 22 by default.",
+  },
 ];
 
-export const allQuestions: Question[] = [...linux, ...aws];
+export const allQuestions: Question[] = [...linux, ...aws , ...networking];
 
 export const questionsByCategory = (slug: string) =>
   allQuestions.filter((q) => q.category === slug);
