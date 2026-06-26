@@ -52,18 +52,29 @@ function CategoryPage() {
   const [dynamicQuestions, setDynamicQuestions] = useState<Question[]>([]);
 
 useEffect(() => {
-  if (category.slug !== "networking") return;
+  if (
+    category.slug !== "networking" &&
+    category.slug !== "windows-server"
+  ) {
+    return;
+  }
 
   fetch("/questions.json")
     .then((res) => res.json())
     .then((data) => {
-      const formatted: Question[] = data.map((q: any) => ({
-        id: `nw-${q.id}`,
-        category: "networking",
+      const filtered = data.filter(
+        (q: any) =>
+          q.category?.toLowerCase().replace(/\s+/g, "-") ===
+          category.slug
+      );
+
+      const formatted: Question[] = filtered.map((q: any, index: number) => ({
+        id: `${category.slug}-${index}`,
+        category: category.slug,
         question: q.question,
         options: q.options,
         correctIndex: q.options.indexOf(q.answer) as 0 | 1 | 2 | 3,
-        explanation: `Correct answer: ${q.answer}`,
+        explanation: q.explanation || `Correct answer: ${q.answer}`,
       }));
 
       setDynamicQuestions(formatted);
@@ -72,12 +83,15 @@ useEffect(() => {
 }, [category.slug]);
 
 const questions = useMemo(() => {
-  if (category.slug === "networking") {
+  if (
+    category.slug === "networking" ||
+    category.slug === "windows-server"
+  ) {
     return dynamicQuestions;
   }
 
   return questionsByCategory(category.slug);
-}, [category.slug, dynamicQuestions]);
+}, [category.slug, dynamicQuestions]);  
   const startIndex = useMemo(() => {
     if (!start) return 0;
     const i = questions.findIndex((q) => q.id === start);
