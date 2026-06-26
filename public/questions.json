@@ -1,36 +1,51 @@
 [
   {
-    "question": "Which layer of the OSI model is responsible for logical addressing and routing?",
+    "id": 1,
+    "question": "Which layer of the OSI model is responsible for logical addressing?",
     "options": [
+      "Physical Layer",
       "Data Link Layer",
       "Network Layer",
-      "Transport Layer",
-      "Application Layer"
+      "Transport Layer"
     ],
     "correct_answer": "Network Layer"
   },
   {
+    "id": 2,
+    "question": "Which protocol is used to resolve domain names to IP addresses?",
+    "options": [
+      "HTTP",
+      "FTP",
+      "DNS",
+      "DHCP"
+    ],
+    "correct_answer": "DNS"
+  },
+  {
+    "id": 3,
     "question": "What is the primary function of a router?",
     "options": [
-      "To connect devices within a single LAN segment",
-      "To filter network traffic based on MAC addresses",
-      "To forward data packets between different computer networks",
-      "To amplify network signals"
+      "To connect devices within a single LAN",
+      "To filter network traffic based on rules",
+      "To forward data packets between different networks",
+      "To assign IP addresses dynamically"
     ],
-    "correct_answer": "To forward data packets between different computer networks"
+    "correct_answer": "To forward data packets between different networks"
   },
   {
-    "question": "Which protocol is connection-oriented and provides reliable data transfer?",
+    "id": 4,
+    "question": "Which of the following is a connection-oriented protocol?",
     "options": [
-      "UDP (User Datagram Protocol)",
-      "ICMP (Internet Control Message Protocol)",
-      "TCP (Transmission Control Protocol)",
-      "ARP (Address Resolution Protocol)"
+      "UDP",
+      "IP",
+      "TCP",
+      "ICMP"
     ],
-    "correct_answer": "TCP (Transmission Control Protocol)"
+    "correct_answer": "TCP"
   },
   {
-    "question": "What is the well-known port number for HTTP?",
+    "id": 5,
+    "question": "What is the default port number for HTTP?",
     "options": [
       "21",
       "23",
@@ -40,86 +55,73 @@
     "correct_answer": "80"
   },
   {
-    "question": "Which of the following is a private IPv4 address range?",
+    "id": 6,
+    "question": "A MAC address operates at which layer of the OSI model?",
     "options": [
-      "192.168.0.0/16",
-      "172.16.0.0/12",
-      "10.0.0.0/8",
-      "All of the above"
+      "Physical Layer",
+      "Data Link Layer",
+      "Network Layer",
+      "Application Layer"
     ],
-    "correct_answer": "All of the above"
+    "correct_answer": "Data Link Layer"
   },
   {
-    "question": "What is the purpose of DNS (Domain Name System)?",
-    "options": [
-      "To assign IP addresses dynamically",
-      "To translate domain names into IP addresses",
-      "To encrypt network traffic",
-      "To manage network security policies"
-    ],
-    "correct_answer": "To translate domain names into IP addresses"
-  },
-  {
+    "id": 7,
     "question": "Which network topology connects all devices to a central hub or switch?",
     "options": [
-      "Bus",
-      "Ring",
-      "Star",
-      "Mesh"
+      "Bus Topology",
+      "Ring Topology",
+      "Star Topology",
+      "Mesh Topology"
     ],
-    "correct_answer": "Star"
+    "correct_answer": "Star Topology"
   },
   {
-    "question": "What is a MAC address?",
+    "id": 8,
+    "question": "What does DHCP stand for?",
     "options": [
-      "A logical address used for routing",
-      "A 32-bit unique identifier for a network interface card (NIC)",
-      "A 48-bit physical address embedded in the network adapter",
-      "An address used for domain name resolution"
+      "Dynamic Host Configuration Protocol",
+      "Domain Host Control Protocol",
+      "Data Handling Communication Protocol",
+      "Digital Hyperlink Client Protocol"
     ],
-    "correct_answer": "A 48-bit physical address embedded in the network adapter"
+    "correct_answer": "Dynamic Host Configuration Protocol"
   },
   {
-    "question": "Which device operates primarily at the Data Link Layer (Layer 2) of the OSI model and forwards frames based on MAC addresses?",
+    "id": 9,
+    "question": "Which device creates separate collision domains for each port?",
     "options": [
       "Hub",
-      "Router",
+      "Repeater",
       "Switch",
-      "Repeater"
+      "Modem"
     ],
     "correct_answer": "Switch"
   },
   {
-    "question": "What is the function of DHCP (Dynamic Host Configuration Protocol)?",
+    "id": 10,
+    "question": "Which of the following is an example of a private IPv4 address range?",
     "options": [
-      "To resolve domain names to IP addresses",
-      "To encrypt data packets",
-      "To dynamically assign IP addresses to devices on a network",
-      "To control internet traffic"
+      "192.168.1.0/24",
+      "11.0.0.0/8",
+      "172.168.0.0/16",
+      "200.1.1.0/24"
     ],
-    "correct_answer": "To dynamically assign IP addresses to devices on a network"
+    "correct_answer": "192.168.1.0/24"
   },
   {
-    "question": "Which of the following is considered a WAN technology?",
+    "id": 11,
+    "question": "What is the primary purpose of a firewall?",
     "options": [
-      "Ethernet",
-      "Wi-Fi",
-      "MPLS",
-      "Bluetooth"
+      "To amplify network signals",
+      "To convert analog signals to digital",
+      "To prevent unauthorized access to a network",
+      "To manage wireless connections"
     ],
-    "correct_answer": "MPLS"
+    "correct_answer": "To prevent unauthorized access to a network"
   },
   {
-    "question": "What does a firewall primarily do?",
-    "options": [
-      "Amplify network signals",
-      "Translate IP addresses",
-      "Monitor and control incoming and outgoing network traffic",
-      "Assign dynamic IP addresses"
-    ],
-    "correct_answer": "Monitor and control incoming and outgoing network traffic"
-  },
-  {
+    "id": 12,
     "question": "In the TCP/IP model, which layer combines the functions of the OSI model's Physical and Data Link layers?",
     "options": [
       "Network Access Layer",
@@ -130,73 +132,91 @@
     "correct_answer": "Network Access Layer"
   },
   {
-    "question": "Which protocol is used for securely transferring files between a client and a server?",
+    "id": 13,
+    "question": "Which protocol is typically used for secure web browsing?",
     "options": [
-      "FTP (File Transfer Protocol)",
-      "SFTP (SSH File Transfer Protocol)",
-      "TFTP (Trivial File Transfer Protocol)",
-      "SMTP (Simple Mail Transfer Protocol)"
+      "HTTP",
+      "FTP",
+      "SMTP",
+      "HTTPS"
     ],
-    "correct_answer": "SFTP (SSH File Transfer Protocol)"
+    "correct_answer": "HTTPS"
   },
   {
-    "question": "What is the maximum number of hops allowed for an IPv4 packet before it is discarded?",
+    "id": 14,
+    "question": "What is the data unit at the Transport Layer called?",
     "options": [
-      "64",
-      "128",
-      "255",
-      "512"
+      "Frame",
+      "Packet",
+      "Segment",
+      "Bit"
     ],
-    "correct_answer": "255"
+    "correct_answer": "Segment"
   },
   {
-    "question": "What does 'ping' command primarily test?",
+    "id": 15,
+    "question": "Which standard specifies wireless LANs (Wi-Fi)?",
     "options": [
-      "Network interface card functionality",
-      "DNS resolution speed",
-      "Network connectivity and latency",
-      "Router configuration"
+      "IEEE 802.3",
+      "IEEE 802.11",
+      "IEEE 802.1Q",
+      "IEEE 802.1X"
     ],
-    "correct_answer": "Network connectivity and latency"
+    "correct_answer": "IEEE 802.11"
   },
   {
-    "question": "Which of these is a valid IPv6 address?",
+    "id": 16,
+    "question": "What does VPN stand for?",
     "options": [
-      "192.168.1.1",
-      "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
-      "10.0.0.256",
-      "172.32.0.1"
+      "Virtual Private Network",
+      "Very Personal Network",
+      "Verified Public Network",
+      "Virtual Protocol Node"
     ],
-    "correct_answer": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
+    "correct_answer": "Virtual Private Network"
   },
   {
-    "question": "What is the process of converting a private IP address into a public IP address for internet access?",
+    "id": 17,
+    "question": "Which of the following is a network-layer protocol for IPv6?",
     "options": [
-      "DHCP",
-      "DNS",
-      "NAT (Network Address Translation)",
-      "ARP"
+      "ARP",
+      "RARP",
+      "ICMPv6",
+      "IGMP"
     ],
-    "correct_answer": "NAT (Network Address Translation)"
+    "correct_answer": "ICMPv6"
   },
   {
-    "question": "Which layer of the OSI model is responsible for establishing, managing, and terminating sessions between applications?",
+    "id": 18,
+    "question": "What is the purpose of NAT (Network Address Translation)?",
     "options": [
-      "Transport Layer",
+      "To encrypt data packets",
+      "To allow multiple devices to share a single public IP address",
+      "To assign unique MAC addresses",
+      "To prioritize network traffic"
+    ],
+    "correct_answer": "To allow multiple devices to share a single public IP address"
+  },
+  {
+    "id": 19,
+    "question": "Which layer of the OSI model provides services like encryption and data compression?",
+    "options": [
       "Session Layer",
       "Presentation Layer",
-      "Application Layer"
+      "Application Layer",
+      "Transport Layer"
     ],
-    "correct_answer": "Session Layer"
+    "correct_answer": "Presentation Layer"
   },
   {
-    "question": "What is the common term for a network that spans a large geographical area, typically across cities or countries?",
+    "id": 20,
+    "question": "What is the maximum data rate of a Gigabit Ethernet connection?",
     "options": [
-      "LAN (Local Area Network)",
-      "WAN (Wide Area Network)",
-      "MAN (Metropolitan Area Network)",
-      "PAN (Personal Area Network)"
+      "10 Mbps",
+      "100 Mbps",
+      "1 Gbps",
+      "10 Gbps"
     ],
-    "correct_answer": "WAN (Wide Area Network)"
+    "correct_answer": "1 Gbps"
   }
 ]
