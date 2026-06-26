@@ -1,39 +1,61 @@
 [
   {
     "id": 1,
-    "question": "What is the primary function of a router?",
+    "question": "Which layer of the OSI model is responsible for logical addressing (IP addresses)?",
     "options": [
-      "To connect devices within a single local area network (LAN)",
-      "To filter network traffic based on MAC addresses",
-      "To forward data packets between different computer networks",
-      "To provide wireless connectivity to devices"
+      "Physical Layer",
+      "Data Link Layer",
+      "Network Layer",
+      "Transport Layer"
     ],
-    "answer": "To forward data packets between different computer networks"
+    "answer_index": 2
   },
   {
     "id": 2,
-    "question": "Which OSI layer is responsible for the physical transmission of data bits over a medium?",
+    "question": "Which protocol is connection-oriented and provides reliable data transfer?",
     "options": [
-      "Data Link Layer",
-      "Network Layer",
-      "Transport Layer",
-      "Physical Layer"
+      "UDP",
+      "ICMP",
+      "TCP",
+      "ARP"
     ],
-    "answer": "Physical Layer"
+    "answer_index": 2
   },
   {
     "id": 3,
-    "question": "Which protocol provides a connection-oriented, reliable, and ordered delivery of data packets?",
+    "question": "What is the primary function of DNS (Domain Name System)?",
     "options": [
-      "UDP (User Datagram Protocol)",
-      "IP (Internet Protocol)",
-      "ICMP (Internet Control Message Protocol)",
-      "TCP (Transmission Control Protocol)"
+      "Assigning dynamic IP addresses",
+      "Translating domain names to IP addresses",
+      "Routing data packets between networks",
+      "Encrypting network traffic"
     ],
-    "answer": "TCP (Transmission Control Protocol)"
+    "answer_index": 1
   },
   {
     "id": 4,
+    "question": "Which network device operates at Layer 3 (Network Layer) of the OSI model and forwards packets between different networks?",
+    "options": [
+      "Switch",
+      "Hub",
+      "Router",
+      "Repeater"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": 5,
+    "question": "What is the standard port number for HTTP?",
+    "options": [
+      "21",
+      "23",
+      "80",
+      "443"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": 6,
     "question": "A MAC address operates at which layer of the OSI model?",
     "options": [
       "Physical Layer",
@@ -41,76 +63,10 @@
       "Network Layer",
       "Transport Layer"
     ],
-    "answer": "Data Link Layer"
-  },
-  {
-    "id": 5,
-    "question": "Which of the following is a private IPv4 address range?",
-    "options": [
-      "11.0.0.0/8",
-      "172.16.0.0/12",
-      "192.169.0.0/16",
-      "203.0.113.0/24"
-    ],
-    "answer": "172.16.0.0/12"
-  },
-  {
-    "id": 6,
-    "question": "What is the main purpose of the Domain Name System (DNS)?",
-    "options": [
-      "To assign IP addresses automatically",
-      "To translate domain names to IP addresses",
-      "To encrypt web traffic",
-      "To manage network security"
-    ],
-    "answer": "To translate domain names to IP addresses"
+    "answer_index": 1
   },
   {
     "id": 7,
-    "question": "How does a network switch differ from a network hub?",
-    "options": [
-      "Hubs are generally faster than switches",
-      "Switches operate at the Physical Layer (Layer 1) of the OSI model",
-      "Switches learn MAC addresses and forward frames only to the intended recipient",
-      "Hubs provide more advanced security features"
-    ],
-    "answer": "Switches learn MAC addresses and forward frames only to the intended recipient"
-  },
-  {
-    "id": 8,
-    "question": "What is the default port number used by the HTTP protocol?",
-    "options": [
-      "21",
-      "23",
-      "80",
-      "443"
-    ],
-    "answer": "80"
-  },
-  {
-    "id": 9,
-    "question": "What is the purpose of a subnet mask?",
-    "options": [
-      "To assign a unique IP address to a device",
-      "To encrypt data packets",
-      "To determine the network and host portion of an IP address",
-      "To specify the default gateway for a network"
-    ],
-    "answer": "To determine the network and host portion of an IP address"
-  },
-  {
-    "id": 10,
-    "question": "What does a Virtual Private Network (VPN) primarily provide?",
-    "options": [
-      "Higher internet speed for users",
-      "Wireless access points for public use",
-      "A secure connection over an insecure network",
-      "Automatic IP address assignment to devices"
-    ],
-    "answer": "A secure connection over an insecure network"
-  },
-  {
-    "id": 11,
     "question": "How many bits are in an IPv6 address?",
     "options": [
       "32 bits",
@@ -118,105 +74,149 @@
       "128 bits",
       "256 bits"
     ],
-    "answer": "128 bits"
+    "answer_index": 2
+  },
+  {
+    "id": 8,
+    "question": "Which protocol dynamically assigns IP addresses to network devices?",
+    "options": [
+      "HTTP",
+      "FTP",
+      "DHCP",
+      "SMTP"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": 9,
+    "question": "What type of cable is commonly used for Ethernet and features pairs of wires twisted together to reduce interference?",
+    "options": [
+      "Coaxial cable",
+      "Fiber optic cable",
+      "Unshielded Twisted Pair (UTP)",
+      "Serial cable"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": 10,
+    "question": "What transmission mode allows data to flow in both directions simultaneously?",
+    "options": [
+      "Simplex",
+      "Half-duplex",
+      "Full-duplex",
+      "Multi-duplex"
+    ],
+    "answer_index": 2
+  },
+  {
+    "id": 11,
+    "question": "Which utility is used to test the reachability of a host on an IP network?",
+    "options": [
+      "Tracert",
+      "Ipconfig",
+      "Ping",
+      "Netstat"
+    ],
+    "answer_index": 2
   },
   {
     "id": 12,
-    "question": "What service automatically assigns IP addresses, subnet masks, default gateways, and DNS server addresses to devices on a network?",
+    "question": "What is the default subnet mask for a Class C IPv4 network?",
     "options": [
-      "DNS (Domain Name System)",
-      "ARP (Address Resolution Protocol)",
-      "DHCP (Dynamic Host Configuration Protocol)",
-      "ICMP (Internet Control Message Protocol)"
+      "255.0.0.0",
+      "255.255.0.0",
+      "255.255.255.0",
+      "255.255.255.255"
     ],
-    "answer": "DHCP (Dynamic Host Configuration Protocol)"
+    "answer_index": 2
   },
   {
     "id": 13,
-    "question": "What is the primary role of a firewall in a network?",
+    "question": "Which OSI layer provides network services to end-user applications?",
     "options": [
-      "To boost Wi-Fi signal strength",
-      "To translate IP addresses between private and public networks",
-      "To prevent unauthorized access to or from a private network",
-      "To route data packets between different networks"
+      "Presentation Layer",
+      "Session Layer",
+      "Application Layer",
+      "Transport Layer"
     ],
-    "answer": "To prevent unauthorized access to or from a private network"
+    "answer_index": 2
   },
   {
     "id": 14,
-    "question": "What term describes the time delay experienced in a network when data travels from one point to another?",
+    "question": "What protocol resolves IP addresses to MAC addresses?",
     "options": [
-      "Bandwidth",
-      "Throughput",
-      "Latency",
-      "Jitter"
+      "RARP",
+      "ICMP",
+      "ARP",
+      "DHCP"
     ],
-    "answer": "Latency"
+    "answer_index": 2
   },
   {
     "id": 15,
     "question": "In which network topology are all devices connected to a central hub or switch?",
     "options": [
-      "Bus topology",
-      "Ring topology",
-      "Mesh topology",
-      "Star topology"
+      "Bus",
+      "Ring",
+      "Star",
+      "Mesh"
     ],
-    "answer": "Star topology"
+    "answer_index": 2
   },
   {
     "id": 16,
-    "question": "Which protocol is used to resolve an IP address to a physical MAC address on a local network?",
+    "question": "What is the default port number for HTTPS?",
     "options": [
-      "DNS (Domain Name System)",
-      "DHCP (Dynamic Host Configuration Protocol)",
-      "ARP (Address Resolution Protocol)",
-      "RARP (Reverse Address Resolution Protocol)"
+      "25",
+      "80",
+      "110",
+      "443"
     ],
-    "answer": "ARP (Address Resolution Protocol)"
+    "answer_index": 3
   },
   {
     "id": 17,
-    "question": "What type of network spans a large geographical area, typically connecting multiple LANs?",
+    "question": "Which of the following is a private IPv4 address range?",
     "options": [
-      "LAN (Local Area Network)",
-      "MAN (Metropolitan Area Network)",
-      "PAN (Personal Area Network)",
-      "WAN (Wide Area Network)"
+      "11.0.0.0/8",
+      "172.16.0.0/12",
+      "192.169.0.0/16",
+      "200.10.10.0/24"
     ],
-    "answer": "WAN (Wide Area Network)"
+    "answer_index": 1
   },
   {
     "id": 18,
-    "question": "Which type of communication allows data to flow in both directions simultaneously?",
+    "question": "At which layer of the OSI model do network switches primarily operate?",
     "options": [
-      "Simplex",
-      "Half-duplex",
-      "Full-duplex",
-      "Multiplex"
+      "Physical Layer",
+      "Data Link Layer",
+      "Network Layer",
+      "Transport Layer"
     ],
-    "answer": "Full-duplex"
+    "answer_index": 1
   },
   {
     "id": 19,
-    "question": "Which of the following is NOT a responsibility of the Transport Layer in the OSI model?",
+    "question": "Which device is used to filter network traffic and protect a network from unauthorized access?",
     "options": [
-      "Segmentation and reassembly of data",
-      "Flow control",
-      "Error control",
-      "Routing packets between networks"
+      "Router",
+      "Switch",
+      "Firewall",
+      "Repeater"
     ],
-    "answer": "Routing packets between networks"
+    "answer_index": 2
   },
   {
     "id": 20,
-    "question": "What is the most common wired networking standard used in local area networks?",
+    "question": "Which type of network broadcast sends a message to all devices on a network segment?",
     "options": [
-      "Wi-Fi",
-      "Bluetooth",
-      "Ethernet",
-      "Cellular"
+      "Unicast",
+      "Multicast",
+      "Broadcast",
+      "Anycast"
     ],
-    "answer": "Ethernet"
+    "answer_index": 2
   }
 ]
