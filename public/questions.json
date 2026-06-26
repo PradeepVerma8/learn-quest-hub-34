@@ -1,222 +1,222 @@
 [
   {
     "id": 1,
-    "question": "Which layer of the OSI model is responsible for logical addressing?",
+    "question": "What is the primary function of a router?",
+    "options": [
+      "To connect devices within a single local area network (LAN)",
+      "To filter network traffic based on MAC addresses",
+      "To forward data packets between different computer networks",
+      "To provide wireless connectivity to devices"
+    ],
+    "answer": "To forward data packets between different computer networks"
+  },
+  {
+    "id": 2,
+    "question": "Which OSI layer is responsible for the physical transmission of data bits over a medium?",
+    "options": [
+      "Data Link Layer",
+      "Network Layer",
+      "Transport Layer",
+      "Physical Layer"
+    ],
+    "answer": "Physical Layer"
+  },
+  {
+    "id": 3,
+    "question": "Which protocol provides a connection-oriented, reliable, and ordered delivery of data packets?",
+    "options": [
+      "UDP (User Datagram Protocol)",
+      "IP (Internet Protocol)",
+      "ICMP (Internet Control Message Protocol)",
+      "TCP (Transmission Control Protocol)"
+    ],
+    "answer": "TCP (Transmission Control Protocol)"
+  },
+  {
+    "id": 4,
+    "question": "A MAC address operates at which layer of the OSI model?",
     "options": [
       "Physical Layer",
       "Data Link Layer",
       "Network Layer",
       "Transport Layer"
     ],
-    "correct_answer": "Network Layer"
-  },
-  {
-    "id": 2,
-    "question": "Which protocol is used to resolve domain names to IP addresses?",
-    "options": [
-      "HTTP",
-      "FTP",
-      "DNS",
-      "DHCP"
-    ],
-    "correct_answer": "DNS"
-  },
-  {
-    "id": 3,
-    "question": "What is the primary function of a router?",
-    "options": [
-      "To connect devices within a single LAN",
-      "To filter network traffic based on rules",
-      "To forward data packets between different networks",
-      "To assign IP addresses dynamically"
-    ],
-    "correct_answer": "To forward data packets between different networks"
-  },
-  {
-    "id": 4,
-    "question": "Which of the following is a connection-oriented protocol?",
-    "options": [
-      "UDP",
-      "IP",
-      "TCP",
-      "ICMP"
-    ],
-    "correct_answer": "TCP"
+    "answer": "Data Link Layer"
   },
   {
     "id": 5,
-    "question": "What is the default port number for HTTP?",
+    "question": "Which of the following is a private IPv4 address range?",
+    "options": [
+      "11.0.0.0/8",
+      "172.16.0.0/12",
+      "192.169.0.0/16",
+      "203.0.113.0/24"
+    ],
+    "answer": "172.16.0.0/12"
+  },
+  {
+    "id": 6,
+    "question": "What is the main purpose of the Domain Name System (DNS)?",
+    "options": [
+      "To assign IP addresses automatically",
+      "To translate domain names to IP addresses",
+      "To encrypt web traffic",
+      "To manage network security"
+    ],
+    "answer": "To translate domain names to IP addresses"
+  },
+  {
+    "id": 7,
+    "question": "How does a network switch differ from a network hub?",
+    "options": [
+      "Hubs are generally faster than switches",
+      "Switches operate at the Physical Layer (Layer 1) of the OSI model",
+      "Switches learn MAC addresses and forward frames only to the intended recipient",
+      "Hubs provide more advanced security features"
+    ],
+    "answer": "Switches learn MAC addresses and forward frames only to the intended recipient"
+  },
+  {
+    "id": 8,
+    "question": "What is the default port number used by the HTTP protocol?",
     "options": [
       "21",
       "23",
       "80",
       "443"
     ],
-    "correct_answer": "80"
-  },
-  {
-    "id": 6,
-    "question": "A MAC address operates at which layer of the OSI model?",
-    "options": [
-      "Physical Layer",
-      "Data Link Layer",
-      "Network Layer",
-      "Application Layer"
-    ],
-    "correct_answer": "Data Link Layer"
-  },
-  {
-    "id": 7,
-    "question": "Which network topology connects all devices to a central hub or switch?",
-    "options": [
-      "Bus Topology",
-      "Ring Topology",
-      "Star Topology",
-      "Mesh Topology"
-    ],
-    "correct_answer": "Star Topology"
-  },
-  {
-    "id": 8,
-    "question": "What does DHCP stand for?",
-    "options": [
-      "Dynamic Host Configuration Protocol",
-      "Domain Host Control Protocol",
-      "Data Handling Communication Protocol",
-      "Digital Hyperlink Client Protocol"
-    ],
-    "correct_answer": "Dynamic Host Configuration Protocol"
+    "answer": "80"
   },
   {
     "id": 9,
-    "question": "Which device creates separate collision domains for each port?",
+    "question": "What is the purpose of a subnet mask?",
     "options": [
-      "Hub",
-      "Repeater",
-      "Switch",
-      "Modem"
+      "To assign a unique IP address to a device",
+      "To encrypt data packets",
+      "To determine the network and host portion of an IP address",
+      "To specify the default gateway for a network"
     ],
-    "correct_answer": "Switch"
+    "answer": "To determine the network and host portion of an IP address"
   },
   {
     "id": 10,
-    "question": "Which of the following is an example of a private IPv4 address range?",
+    "question": "What does a Virtual Private Network (VPN) primarily provide?",
     "options": [
-      "192.168.1.0/24",
-      "11.0.0.0/8",
-      "172.168.0.0/16",
-      "200.1.1.0/24"
+      "Higher internet speed for users",
+      "Wireless access points for public use",
+      "A secure connection over an insecure network",
+      "Automatic IP address assignment to devices"
     ],
-    "correct_answer": "192.168.1.0/24"
+    "answer": "A secure connection over an insecure network"
   },
   {
     "id": 11,
-    "question": "What is the primary purpose of a firewall?",
+    "question": "How many bits are in an IPv6 address?",
     "options": [
-      "To amplify network signals",
-      "To convert analog signals to digital",
-      "To prevent unauthorized access to a network",
-      "To manage wireless connections"
+      "32 bits",
+      "64 bits",
+      "128 bits",
+      "256 bits"
     ],
-    "correct_answer": "To prevent unauthorized access to a network"
+    "answer": "128 bits"
   },
   {
     "id": 12,
-    "question": "In the TCP/IP model, which layer combines the functions of the OSI model's Physical and Data Link layers?",
+    "question": "What service automatically assigns IP addresses, subnet masks, default gateways, and DNS server addresses to devices on a network?",
     "options": [
-      "Network Access Layer",
-      "Internet Layer",
-      "Transport Layer",
-      "Application Layer"
+      "DNS (Domain Name System)",
+      "ARP (Address Resolution Protocol)",
+      "DHCP (Dynamic Host Configuration Protocol)",
+      "ICMP (Internet Control Message Protocol)"
     ],
-    "correct_answer": "Network Access Layer"
+    "answer": "DHCP (Dynamic Host Configuration Protocol)"
   },
   {
     "id": 13,
-    "question": "Which protocol is typically used for secure web browsing?",
+    "question": "What is the primary role of a firewall in a network?",
     "options": [
-      "HTTP",
-      "FTP",
-      "SMTP",
-      "HTTPS"
+      "To boost Wi-Fi signal strength",
+      "To translate IP addresses between private and public networks",
+      "To prevent unauthorized access to or from a private network",
+      "To route data packets between different networks"
     ],
-    "correct_answer": "HTTPS"
+    "answer": "To prevent unauthorized access to or from a private network"
   },
   {
     "id": 14,
-    "question": "What is the data unit at the Transport Layer called?",
+    "question": "What term describes the time delay experienced in a network when data travels from one point to another?",
     "options": [
-      "Frame",
-      "Packet",
-      "Segment",
-      "Bit"
+      "Bandwidth",
+      "Throughput",
+      "Latency",
+      "Jitter"
     ],
-    "correct_answer": "Segment"
+    "answer": "Latency"
   },
   {
     "id": 15,
-    "question": "Which standard specifies wireless LANs (Wi-Fi)?",
+    "question": "In which network topology are all devices connected to a central hub or switch?",
     "options": [
-      "IEEE 802.3",
-      "IEEE 802.11",
-      "IEEE 802.1Q",
-      "IEEE 802.1X"
+      "Bus topology",
+      "Ring topology",
+      "Mesh topology",
+      "Star topology"
     ],
-    "correct_answer": "IEEE 802.11"
+    "answer": "Star topology"
   },
   {
     "id": 16,
-    "question": "What does VPN stand for?",
+    "question": "Which protocol is used to resolve an IP address to a physical MAC address on a local network?",
     "options": [
-      "Virtual Private Network",
-      "Very Personal Network",
-      "Verified Public Network",
-      "Virtual Protocol Node"
+      "DNS (Domain Name System)",
+      "DHCP (Dynamic Host Configuration Protocol)",
+      "ARP (Address Resolution Protocol)",
+      "RARP (Reverse Address Resolution Protocol)"
     ],
-    "correct_answer": "Virtual Private Network"
+    "answer": "ARP (Address Resolution Protocol)"
   },
   {
     "id": 17,
-    "question": "Which of the following is a network-layer protocol for IPv6?",
+    "question": "What type of network spans a large geographical area, typically connecting multiple LANs?",
     "options": [
-      "ARP",
-      "RARP",
-      "ICMPv6",
-      "IGMP"
+      "LAN (Local Area Network)",
+      "MAN (Metropolitan Area Network)",
+      "PAN (Personal Area Network)",
+      "WAN (Wide Area Network)"
     ],
-    "correct_answer": "ICMPv6"
+    "answer": "WAN (Wide Area Network)"
   },
   {
     "id": 18,
-    "question": "What is the purpose of NAT (Network Address Translation)?",
+    "question": "Which type of communication allows data to flow in both directions simultaneously?",
     "options": [
-      "To encrypt data packets",
-      "To allow multiple devices to share a single public IP address",
-      "To assign unique MAC addresses",
-      "To prioritize network traffic"
+      "Simplex",
+      "Half-duplex",
+      "Full-duplex",
+      "Multiplex"
     ],
-    "correct_answer": "To allow multiple devices to share a single public IP address"
+    "answer": "Full-duplex"
   },
   {
     "id": 19,
-    "question": "Which layer of the OSI model provides services like encryption and data compression?",
+    "question": "Which of the following is NOT a responsibility of the Transport Layer in the OSI model?",
     "options": [
-      "Session Layer",
-      "Presentation Layer",
-      "Application Layer",
-      "Transport Layer"
+      "Segmentation and reassembly of data",
+      "Flow control",
+      "Error control",
+      "Routing packets between networks"
     ],
-    "correct_answer": "Presentation Layer"
+    "answer": "Routing packets between networks"
   },
   {
     "id": 20,
-    "question": "What is the maximum data rate of a Gigabit Ethernet connection?",
+    "question": "What is the most common wired networking standard used in local area networks?",
     "options": [
-      "10 Mbps",
-      "100 Mbps",
-      "1 Gbps",
-      "10 Gbps"
+      "Wi-Fi",
+      "Bluetooth",
+      "Ethernet",
+      "Cellular"
     ],
-    "correct_answer": "1 Gbps"
+    "answer": "Ethernet"
   }
 ]
