@@ -1,9 +1,9 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
 import { z } from "zod";
 import { PageShell } from "@/components/PageShell";
 import { getCategory, categories } from "@/data/categories";
-import { questionsByCategory } from "@/data/questions";
+import { useEffect, useMemo, useState } from "react";
+import { questionsByCategory, type Question,} from "@/data/questions";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle2, XCircle, ChevronLeft, ChevronRight, Timer } from "lucide-react";
@@ -48,7 +48,36 @@ export const Route = createFileRoute("/category/$slug")({
 function CategoryPage() {
   const { category } = Route.useLoaderData();
   const { start } = Route.useSearch();
-  const questions = useMemo(() => questionsByCategory(category.slug), [category.slug]);
+  // const questions = useMemo(() => questionsByCategory(category.slug), [category.slug]);
+  const [dynamicQuestions, setDynamicQuestions] = useState<Question[]>([]);
+
+useEffect(() => {
+  if (category.slug !== "networking") return;
+
+  fetch("/questions.json")
+    .then((res) => res.json())
+    .then((data) => {
+      const formatted: Question[] = data.map((q: any) => ({
+        id: `nw-${q.id}`,
+        category: "networking",
+        question: q.question,
+        options: q.options,
+        correctIndex: q.options.indexOf(q.answer) as 0 | 1 | 2 | 3,
+        explanation: `Correct answer: ${q.answer}`,
+      }));
+
+      setDynamicQuestions(formatted);
+    })
+    .catch(console.error);
+}, [category.slug]);
+
+const questions = useMemo(() => {
+  if (category.slug === "networking") {
+    return dynamicQuestions;
+  }
+
+  return questionsByCategory(category.slug);
+}, [category.slug, dynamicQuestions]);
   const startIndex = useMemo(() => {
     if (!start) return 0;
     const i = questions.findIndex((q) => q.id === start);
