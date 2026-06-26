@@ -1,76 +1,36 @@
 [
   {
-    "question": "Which layer of the OSI model is responsible for end-to-end communication and data integrity?",
+    "question": "Which layer of the OSI model is responsible for logical addressing and routing?",
     "options": [
-      "Physical Layer",
       "Data Link Layer",
       "Network Layer",
-      "Transport Layer"
+      "Transport Layer",
+      "Application Layer"
     ],
-    "correct_answer": "Transport Layer"
+    "correct_answer": "Network Layer"
+  },
+  {
+    "question": "What is the primary function of a router?",
+    "options": [
+      "To connect devices within a single LAN segment",
+      "To filter network traffic based on MAC addresses",
+      "To forward data packets between different computer networks",
+      "To amplify network signals"
+    ],
+    "correct_answer": "To forward data packets between different computer networks"
   },
   {
     "question": "Which protocol is connection-oriented and provides reliable data transfer?",
     "options": [
-      "UDP",
-      "IP",
-      "ICMP",
-      "TCP"
+      "UDP (User Datagram Protocol)",
+      "ICMP (Internet Control Message Protocol)",
+      "TCP (Transmission Control Protocol)",
+      "ARP (Address Resolution Protocol)"
     ],
-    "correct_answer": "TCP"
+    "correct_answer": "TCP (Transmission Control Protocol)"
   },
   {
-    "question": "Which of the following is a private IPv4 address range?",
-    "options": [
-      "11.0.0.0/8",
-      "172.16.0.0/12",
-      "192.0.0.0/24",
-      "224.0.0.0/4"
-    ],
-    "correct_answer": "172.16.0.0/12"
-  },
-  {
-    "question": "A device that connects different networks and forwards data packets based on IP addresses is called a:",
-    "options": [
-      "Switch",
-      "Hub",
-      "Router",
-      "Repeater"
-    ],
-    "correct_answer": "Router"
-  },
-  {
-    "question": "What is the primary function of DNS?",
-    "options": [
-      "Assigning IP addresses",
-      "Encrypting data",
-      "Translating domain names to IP addresses",
-      "Routing packets"
-    ],
-    "correct_answer": "Translating domain names to IP addresses"
-  },
-  {
-    "question": "Which standard defines the Ethernet protocol?",
-    "options": [
-      "IEEE 802.11",
-      "IEEE 802.3",
-      "IEEE 802.1Q",
-      "IEEE 802.1D"
-    ],
-    "correct_answer": "IEEE 802.3"
-  },
-  {
-    "question": "What is the purpose of a subnet mask?",
-    "options": [
-      "To identify the network class",
-      "To determine the number of hosts in a network",
-      "To differentiate between the network portion and the host portion of an IP address",
-      "To secure network communication"
-    ],
-    "correct_answer": "To differentiate between the network portion and the host portion of an IP address"
-  },
-  {
-    "question": "Which port number is typically used by the HTTP protocol?",
+    "question": "What is the well-known port number for HTTP?",
     "options": [
       "21",
       "23",
@@ -80,7 +40,27 @@
     "correct_answer": "80"
   },
   {
-    "question": "In which network topology are all devices connected to a central hub or switch?",
+    "question": "Which of the following is a private IPv4 address range?",
+    "options": [
+      "192.168.0.0/16",
+      "172.16.0.0/12",
+      "10.0.0.0/8",
+      "All of the above"
+    ],
+    "correct_answer": "All of the above"
+  },
+  {
+    "question": "What is the purpose of DNS (Domain Name System)?",
+    "options": [
+      "To assign IP addresses dynamically",
+      "To translate domain names into IP addresses",
+      "To encrypt network traffic",
+      "To manage network security policies"
+    ],
+    "correct_answer": "To translate domain names into IP addresses"
+  },
+  {
+    "question": "Which network topology connects all devices to a central hub or switch?",
     "options": [
       "Bus",
       "Ring",
@@ -90,113 +70,133 @@
     "correct_answer": "Star"
   },
   {
-    "question": "What is a MAC address primarily used for?",
+    "question": "What is a MAC address?",
     "options": [
-      "Logical addressing at the Network layer",
-      "Unique identification of a network interface at the Data Link layer",
-      "Routing packets across networks",
-      "Identifying web servers"
+      "A logical address used for routing",
+      "A 32-bit unique identifier for a network interface card (NIC)",
+      "A 48-bit physical address embedded in the network adapter",
+      "An address used for domain name resolution"
     ],
-    "correct_answer": "Unique identification of a network interface at the Data Link layer"
+    "correct_answer": "A 48-bit physical address embedded in the network adapter"
   },
   {
-    "question": "What does DHCP stand for and what is its main function?",
+    "question": "Which device operates primarily at the Data Link Layer (Layer 2) of the OSI model and forwards frames based on MAC addresses?",
     "options": [
-      "Dynamic Host Configuration Protocol; Assigns IP addresses automatically",
-      "Domain Host Control Protocol; Resolves domain names",
-      "Data Handling Control Protocol; Manages data flow",
-      "Digital Home Communication Protocol; Connects smart home devices"
+      "Hub",
+      "Router",
+      "Switch",
+      "Repeater"
     ],
-    "correct_answer": "Dynamic Host Configuration Protocol; Assigns IP addresses automatically"
+    "correct_answer": "Switch"
   },
   {
-    "question": "What is the main purpose of a Virtual Private Network (VPN)?",
+    "question": "What is the function of DHCP (Dynamic Host Configuration Protocol)?",
     "options": [
-      "To speed up internet browsing",
-      "To connect devices within a single LAN",
-      "To create a secure connection over a public network",
-      "To block unwanted advertisements"
+      "To resolve domain names to IP addresses",
+      "To encrypt data packets",
+      "To dynamically assign IP addresses to devices on a network",
+      "To control internet traffic"
     ],
-    "correct_answer": "To create a secure connection over a public network"
+    "correct_answer": "To dynamically assign IP addresses to devices on a network"
   },
   {
-    "question": "What is the data unit at the Network Layer of the OSI model called?",
+    "question": "Which of the following is considered a WAN technology?",
     "options": [
-      "Frame",
-      "Segment",
-      "Packet",
-      "Bit"
+      "Ethernet",
+      "Wi-Fi",
+      "MPLS",
+      "Bluetooth"
     ],
-    "correct_answer": "Packet"
+    "correct_answer": "MPLS"
   },
   {
-    "question": "What is a key difference between a network hub and a network switch?",
+    "question": "What does a firewall primarily do?",
     "options": [
-      "A hub operates at Layer 3, while a switch operates at Layer 2.",
-      "A hub broadcasts all traffic, while a switch sends traffic only to the destination port.",
-      "A hub is faster than a switch.",
-      "A hub supports full-duplex communication, while a switch does not."
+      "Amplify network signals",
+      "Translate IP addresses",
+      "Monitor and control incoming and outgoing network traffic",
+      "Assign dynamic IP addresses"
     ],
-    "correct_answer": "A hub broadcasts all traffic, while a switch sends traffic only to the destination port."
+    "correct_answer": "Monitor and control incoming and outgoing network traffic"
   },
   {
-    "question": "How many bits are in an IPv6 address?",
+    "question": "In the TCP/IP model, which layer combines the functions of the OSI model's Physical and Data Link layers?",
     "options": [
-      "32",
-      "48",
+      "Network Access Layer",
+      "Internet Layer",
+      "Transport Layer",
+      "Application Layer"
+    ],
+    "correct_answer": "Network Access Layer"
+  },
+  {
+    "question": "Which protocol is used for securely transferring files between a client and a server?",
+    "options": [
+      "FTP (File Transfer Protocol)",
+      "SFTP (SSH File Transfer Protocol)",
+      "TFTP (Trivial File Transfer Protocol)",
+      "SMTP (Simple Mail Transfer Protocol)"
+    ],
+    "correct_answer": "SFTP (SSH File Transfer Protocol)"
+  },
+  {
+    "question": "What is the maximum number of hops allowed for an IPv4 packet before it is discarded?",
+    "options": [
       "64",
-      "128"
+      "128",
+      "255",
+      "512"
     ],
-    "correct_answer": "128"
+    "correct_answer": "255"
   },
   {
-    "question": "Which of the following is an Application Layer protocol used for transferring files between a client and a server?",
+    "question": "What does 'ping' command primarily test?",
     "options": [
-      "SMTP",
-      "POP3",
-      "FTP",
-      "IMAP"
+      "Network interface card functionality",
+      "DNS resolution speed",
+      "Network connectivity and latency",
+      "Router configuration"
     ],
-    "correct_answer": "FTP"
+    "correct_answer": "Network connectivity and latency"
   },
   {
-    "question": "In a half-duplex communication system:",
+    "question": "Which of these is a valid IPv6 address?",
     "options": [
-      "Data can be sent and received simultaneously.",
-      "Data can be sent in only one direction.",
-      "Data can be sent in both directions but not simultaneously.",
-      "Data transfer is always slower than simplex."
+      "192.168.1.1",
+      "2001:0db8:85a3:0000:0000:8a2e:0370:7334",
+      "10.0.0.256",
+      "172.32.0.1"
     ],
-    "correct_answer": "Data can be sent in both directions but not simultaneously."
+    "correct_answer": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
   },
   {
-    "question": "What is the primary role of a firewall in a network?",
+    "question": "What is the process of converting a private IP address into a public IP address for internet access?",
     "options": [
-      "To amplify network signals",
-      "To convert analog signals to digital",
-      "To control incoming and outgoing network traffic based on predefined security rules",
-      "To store network configuration data"
+      "DHCP",
+      "DNS",
+      "NAT (Network Address Translation)",
+      "ARP"
     ],
-    "correct_answer": "To control incoming and outgoing network traffic based on predefined security rules"
+    "correct_answer": "NAT (Network Address Translation)"
   },
   {
-    "question": "What is the Address Resolution Protocol (ARP) used for?",
+    "question": "Which layer of the OSI model is responsible for establishing, managing, and terminating sessions between applications?",
     "options": [
-      "To resolve IP addresses to domain names",
-      "To resolve MAC addresses to IP addresses",
-      "To resolve IP addresses to MAC addresses",
-      "To resolve domain names to IP addresses"
+      "Transport Layer",
+      "Session Layer",
+      "Presentation Layer",
+      "Application Layer"
     ],
-    "correct_answer": "To resolve IP addresses to MAC addresses"
+    "correct_answer": "Session Layer"
   },
   {
-    "question": "Which type of cable uses light pulses to transmit data and is known for its high bandwidth and long-distance capabilities?",
+    "question": "What is the common term for a network that spans a large geographical area, typically across cities or countries?",
     "options": [
-      "Coaxial cable",
-      "Twisted-pair cable",
-      "Fiber-optic cable",
-      "USB cable"
+      "LAN (Local Area Network)",
+      "WAN (Wide Area Network)",
+      "MAN (Metropolitan Area Network)",
+      "PAN (Personal Area Network)"
     ],
-    "correct_answer": "Fiber-optic cable"
+    "correct_answer": "WAN (Wide Area Network)"
   }
 ]
