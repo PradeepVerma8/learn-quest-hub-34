@@ -1,122 +1,122 @@
 [
   {
-    "category": "{{$json.category}}",
-    "question": "What is the largest organ in the human body?",
+    "category": "Computer Science",
+    "question": "Which data structure operates on a Last-In, First-Out (LIFO) principle?",
     "options": [
-      "Heart",
-      "Brain",
-      "Skin",
-      "Liver"
+      "Queue",
+      "Stack",
+      "Linked List",
+      "Array"
     ],
-    "answer": "Skin",
-    "explanation": "The skin is the largest organ of the human body, covering an area of about 2 square meters in adults."
+    "answer": "Stack",
+    "explanation": "A Stack is a linear data structure that follows the LIFO principle, meaning the last element added is the first one to be removed."
   },
   {
-    "category": "{{$json.category}}",
-    "question": "Which planet is known as the 'Red Planet'?",
+    "category": "Computer Science",
+    "question": "What is the worst-case time complexity of the Bubble Sort algorithm?",
     "options": [
-      "Earth",
-      "Mars",
-      "Jupiter",
-      "Venus"
+      "O(n log n)",
+      "O(n)",
+      "O(n^2)",
+      "O(log n)"
     ],
-    "answer": "Mars",
-    "explanation": "Mars is often called the Red Planet because of the iron oxide prevalent on its surface, which gives it a reddish appearance."
+    "answer": "O(n^2)",
+    "explanation": "In its worst-case scenario (e.g., a reverse-sorted array), Bubble Sort requires n-1 passes, with each pass potentially comparing up to n elements, leading to O(n^2) complexity."
   },
   {
-    "category": "{{$json.category}}",
-    "question": "Who painted the Mona Lisa?",
+    "category": "Computer Science",
+    "question": "In object-oriented programming, what is the mechanism of acquiring the properties and behaviors of an existing class by a new class?",
     "options": [
-      "Vincent van Gogh",
-      "Pablo Picasso",
-      "Leonardo da Vinci",
-      "Claude Monet"
+      "Polymorphism",
+      "Encapsulation",
+      "Inheritance",
+      "Abstraction"
     ],
-    "answer": "Leonardo da Vinci",
-    "explanation": "The Mona Lisa is a half-length portrait painting by Italian artist Leonardo da Vinci, widely considered an archetypal masterpiece of the Italian Renaissance."
+    "answer": "Inheritance",
+    "explanation": "Inheritance is a fundamental OOP concept where a new class (subclass/derived class) derives properties and methods from an existing class (superclass/base class)."
   },
   {
-    "category": "{{$json.category}}",
-    "question": "What is the chemical symbol for water?",
+    "category": "Computer Science",
+    "question": "Which component of an operating system manages processes, memory, and I/O operations?",
     "options": [
-      "O2",
-      "CO2",
-      "H2O",
-      "NaCl"
+      "Shell",
+      "Kernel",
+      "Compiler",
+      "File System"
     ],
-    "answer": "H2O",
-    "explanation": "Water is a chemical compound with the chemical formula H2O, meaning one molecule of water contains two hydrogen atoms and one oxygen atom."
+    "answer": "Kernel",
+    "explanation": "The kernel is the core component of an operating system, responsible for managing system resources and mediating between hardware and applications."
   },
   {
-    "category": "{{$json.category}}",
-    "question": "How many continents are there in the world?",
+    "category": "Computer Science",
+    "question": "What protocol is used for securely transmitting web pages over the internet?",
     "options": [
-      "5",
-      "6",
-      "7",
-      "8"
+      "HTTP",
+      "FTP",
+      "SMTP",
+      "HTTPS"
     ],
-    "answer": "7",
-    "explanation": "There are generally considered to be seven continents: Asia, Africa, North America, South America, Antarctica, Europe, and Australia."
+    "answer": "HTTPS",
+    "explanation": "HTTPS (Hypertext Transfer Protocol Secure) is the secure version of HTTP, using SSL/TLS encryption to protect data transmitted between a web browser and a website."
   },
   {
-    "category": "{{$json.category}}",
-    "question": "Which ocean is the largest on Earth?",
+    "category": "Computer Science",
+    "question": "Which SQL clause is used to filter records based on a specified condition?",
     "options": [
-      "Atlantic Ocean",
-      "Indian Ocean",
-      "Arctic Ocean",
-      "Pacific Ocean"
+      "SELECT",
+      "FROM",
+      "WHERE",
+      "GROUP BY"
     ],
-    "answer": "Pacific Ocean",
-    "explanation": "The Pacific Ocean is the largest and deepest of Earth's five oceanic divisions, covering about one-third of the surface of the Earth."
+    "answer": "WHERE",
+    "explanation": "The WHERE clause is used to extract only those records that fulfill a specified condition in a SQL query."
   },
   {
-    "category": "{{$json.category}}",
-    "question": "What is the capital city of Japan?",
+    "category": "Computer Science",
+    "question": "What is the primary function of the CPU's Arithmetic Logic Unit (ALU)?",
     "options": [
-      "Seoul",
-      "Beijing",
-      "Tokyo",
-      "Bangkok"
+      "Store data",
+      "Execute input/output operations",
+      "Perform arithmetic and logical operations",
+      "Control program flow"
     ],
-    "answer": "Tokyo",
-    "explanation": "Tokyo is the capital and most populous prefecture of Japan, located at the head of Tokyo Bay."
+    "answer": "Perform arithmetic and logical operations",
+    "explanation": "The ALU is a fundamental part of the CPU that performs all arithmetic operations (addition, subtraction, etc.) and logical operations (AND, OR, NOT, etc.)."
   },
   {
-    "category": "{{$json.category}}",
-    "question": "Which famous scientist developed the theory of relativity?",
+    "category": "Computer Science",
+    "question": "Which of the following is an iterative and incremental software development model?",
     "options": [
-      "Isaac Newton",
-      "Albert Einstein",
-      "Galileo Galilei",
-      "Stephen Hawking"
+      "Waterfall Model",
+      "Spiral Model",
+      "V-Model",
+      "Big Bang Model"
     ],
-    "answer": "Albert Einstein",
-    "explanation": "Albert Einstein was a German-born theoretical physicist who developed the theory of relativity, one of the two pillars of modern physics."
+    "answer": "Spiral Model",
+    "explanation": "The Spiral Model is a risk-driven, iterative, and incremental software development process model that combines elements of both prototyping and waterfall models."
   },
   {
-    "category": "{{$json.category}}",
-    "question": "What is the process by which plants make their own food?",
+    "category": "Computer Science",
+    "question": "What is the field of AI focused on enabling computers to 'see' and interpret visual information from the world?",
     "options": [
-      "Respiration",
-      "Transpiration",
-      "Germination",
-      "Photosynthesis"
+      "Natural Language Processing",
+      "Robotics",
+      "Machine Learning",
+      "Computer Vision"
     ],
-    "answer": "Photosynthesis",
-    "explanation": "Photosynthesis is the process used by plants, algae, and certain bacteria to convert light energy into chemical energy that can be later released to fuel the organisms' activities."
+    "answer": "Computer Vision",
+    "explanation": "Computer Vision is an interdisciplinary field that deals with how computers can be made to gain high-level understanding from digital images or videos."
   },
   {
-    "category": "{{$json.category}}",
-    "question": "Which of these is not a primary color of light?",
+    "category": "Computer Science",
+    "question": "Which programming paradigm emphasizes the use of functions to create programs, avoiding mutable data and side effects?",
     "options": [
-      "Red",
-      "Green",
-      "Blue",
-      "Yellow"
+      "Object-Oriented Programming",
+      "Procedural Programming",
+      "Functional Programming",
+      "Event-Driven Programming"
     ],
-    "answer": "Yellow",
-    "explanation": "The primary colors of light (additive primaries) are Red, Green, and Blue (RGB). Yellow is a secondary color, formed by mixing red and green light."
+    "answer": "Functional Programming",
+    "explanation": "Functional programming is a programming paradigm where programs are constructed by applying and composing functions, emphasizing immutability and avoiding state changes."
   }
 ]
