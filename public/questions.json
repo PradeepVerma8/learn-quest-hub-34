@@ -1,122 +1,112 @@
 [
   {
-    "category": "Computer Science",
-    "question": "Which data structure operates on a Last-In, First-Out (LIFO) principle?",
+    "question": "Which layer of the OSI model is responsible for logical addressing (IP addresses) and routing?",
     "options": [
-      "Queue",
-      "Stack",
-      "Linked List",
-      "Array"
+      "Physical Layer",
+      "Data Link Layer",
+      "Network Layer",
+      "Transport Layer"
     ],
-    "answer": "Stack",
-    "explanation": "A Stack is a linear data structure that follows the LIFO principle, meaning the last element added is the first one to be removed."
+    "answer": "Network Layer",
+    "explanation": "The Network Layer (Layer 3) handles IP addressing and routing decisions, ensuring data reaches the correct destination across different networks."
   },
   {
-    "category": "Computer Science",
-    "question": "What is the worst-case time complexity of the Bubble Sort algorithm?",
+    "question": "What network device operates at the Data Link layer and forwards frames based on MAC addresses?",
     "options": [
-      "O(n log n)",
-      "O(n)",
-      "O(n^2)",
-      "O(log n)"
+      "Router",
+      "Hub",
+      "Switch",
+      "Repeater"
     ],
-    "answer": "O(n^2)",
-    "explanation": "In its worst-case scenario (e.g., a reverse-sorted array), Bubble Sort requires n-1 passes, with each pass potentially comparing up to n elements, leading to O(n^2) complexity."
+    "answer": "Switch",
+    "explanation": "Switches are Layer 2 devices that learn MAC addresses of connected devices and forward frames selectively to the correct port, improving network efficiency."
   },
   {
-    "category": "Computer Science",
-    "question": "In object-oriented programming, what is the mechanism of acquiring the properties and behaviors of an existing class by a new class?",
+    "question": "Which protocol is used to resolve an IP address to a MAC address on a local network?",
     "options": [
-      "Polymorphism",
-      "Encapsulation",
-      "Inheritance",
-      "Abstraction"
+      "DNS (Domain Name System)",
+      "DHCP (Dynamic Host Configuration Protocol)",
+      "ARP (Address Resolution Protocol)",
+      "ICMP (Internet Control Message Protocol)"
     ],
-    "answer": "Inheritance",
-    "explanation": "Inheritance is a fundamental OOP concept where a new class (subclass/derived class) derives properties and methods from an existing class (superclass/base class)."
+    "answer": "ARP (Address Resolution Protocol)",
+    "explanation": "ARP maps logical IP addresses to physical MAC addresses, which is crucial for communication within a local segment."
   },
   {
-    "category": "Computer Science",
-    "question": "Which component of an operating system manages processes, memory, and I/O operations?",
+    "question": "Which of the following is a connection-oriented protocol that ensures reliable, ordered, and error-checked data delivery?",
     "options": [
-      "Shell",
-      "Kernel",
-      "Compiler",
-      "File System"
+      "UDP (User Datagram Protocol)",
+      "IP (Internet Protocol)",
+      "ICMP (Internet Control Message Protocol)",
+      "TCP (Transmission Control Protocol)"
     ],
-    "answer": "Kernel",
-    "explanation": "The kernel is the core component of an operating system, responsible for managing system resources and mediating between hardware and applications."
+    "answer": "TCP (Transmission Control Protocol)",
+    "explanation": "TCP provides reliable data transfer through mechanisms like acknowledgements, retransmissions, and flow control, guaranteeing data integrity and order."
   },
   {
-    "category": "Computer Science",
-    "question": "What protocol is used for securely transmitting web pages over the internet?",
+    "question": "What is the primary function of the Domain Name System (DNS)?",
     "options": [
-      "HTTP",
-      "FTP",
-      "SMTP",
-      "HTTPS"
+      "Assigning IP addresses automatically to devices",
+      "Translating human-readable domain names into IP addresses",
+      "Encrypting network traffic for security",
+      "Monitoring network performance and traffic"
     ],
-    "answer": "HTTPS",
-    "explanation": "HTTPS (Hypertext Transfer Protocol Secure) is the secure version of HTTP, using SSL/TLS encryption to protect data transmitted between a web browser and a website."
+    "answer": "Translating human-readable domain names into IP addresses",
+    "explanation": "DNS translates domain names (like example.com) into numerical IP addresses that computers use to identify each other on the internet."
   },
   {
-    "category": "Computer Science",
-    "question": "Which SQL clause is used to filter records based on a specified condition?",
+    "question": "In which network topology are all devices connected to a single central hub or switch?",
     "options": [
-      "SELECT",
-      "FROM",
-      "WHERE",
-      "GROUP BY"
+      "Bus",
+      "Ring",
+      "Mesh",
+      "Star"
     ],
-    "answer": "WHERE",
-    "explanation": "The WHERE clause is used to extract only those records that fulfill a specified condition in a SQL query."
+    "answer": "Star",
+    "explanation": "In a star topology, each device has a dedicated point-to-point connection to a central device (hub or switch). This design is common in most modern LANs."
   },
   {
-    "category": "Computer Science",
-    "question": "What is the primary function of the CPU's Arithmetic Logic Unit (ALU)?",
+    "question": "Which class of IP addresses uses a default subnet mask of 255.255.255.0 and is commonly used for small to medium-sized networks?",
     "options": [
-      "Store data",
-      "Execute input/output operations",
-      "Perform arithmetic and logical operations",
-      "Control program flow"
+      "Class A",
+      "Class B",
+      "Class C",
+      "Class D"
     ],
-    "answer": "Perform arithmetic and logical operations",
-    "explanation": "The ALU is a fundamental part of the CPU that performs all arithmetic operations (addition, subtraction, etc.) and logical operations (AND, OR, NOT, etc.)."
+    "answer": "Class C",
+    "explanation": "Class C IP addresses are characterized by their first octet ranging from 192-223, and by default, the first three octets represent the network ID."
   },
   {
-    "category": "Computer Science",
-    "question": "Which of the following is an iterative and incremental software development model?",
+    "question": "What is the main purpose of a firewall in a network?",
     "options": [
-      "Waterfall Model",
-      "Spiral Model",
-      "V-Model",
-      "Big Bang Model"
+      "To boost Wi-Fi signal strength",
+      "To protect against unauthorized access and malicious traffic",
+      "To assign IP addresses to network devices",
+      "To amplify data signals over long distances"
     ],
-    "answer": "Spiral Model",
-    "explanation": "The Spiral Model is a risk-driven, iterative, and incremental software development process model that combines elements of both prototyping and waterfall models."
+    "answer": "To protect against unauthorized access and malicious traffic",
+    "explanation": "A firewall acts as a security barrier, controlling incoming and outgoing network traffic based on predefined security rules to prevent unauthorized access and attacks."
   },
   {
-    "category": "Computer Science",
-    "question": "What is the field of AI focused on enabling computers to 'see' and interpret visual information from the world?",
+    "question": "Which IEEE standard defines the specifications for Wireless Local Area Networks (WLANs)?",
     "options": [
-      "Natural Language Processing",
-      "Robotics",
-      "Machine Learning",
-      "Computer Vision"
+      "IEEE 802.3",
+      "IEEE 802.5",
+      "IEEE 802.11",
+      "IEEE 802.1Q"
     ],
-    "answer": "Computer Vision",
-    "explanation": "Computer Vision is an interdisciplinary field that deals with how computers can be made to gain high-level understanding from digital images or videos."
+    "answer": "IEEE 802.11",
+    "explanation": "IEEE 802.11 is the family of standards that define the protocols for implementing wireless local area networks (WLANs), commonly known as Wi-Fi."
   },
   {
-    "category": "Computer Science",
-    "question": "Which programming paradigm emphasizes the use of functions to create programs, avoiding mutable data and side effects?",
+    "question": "Which of the following IP address ranges is reserved for private networks?",
     "options": [
-      "Object-Oriented Programming",
-      "Procedural Programming",
-      "Functional Programming",
-      "Event-Driven Programming"
+      "172.32.0.0 - 172.63.255.255",
+      "10.0.0.0 - 10.255.255.255",
+      "198.162.0.0 - 198.162.255.255",
+      "200.100.0.0 - 200.100.255.255"
     ],
-    "answer": "Functional Programming",
-    "explanation": "Functional programming is a programming paradigm where programs are constructed by applying and composing functions, emphasizing immutability and avoiding state changes."
+    "answer": "10.0.0.0 - 10.255.255.255",
+    "explanation": "The private IP address ranges are defined by RFC 1918. They are: 10.0.0.0/8 (10.0.0.0 - 10.255.255.255), 172.16.0.0/12 (172.16.0.0 - 172.31.255.255), and 192.168.0.0/16 (192.168.0.0 - 192.168.255.255). Only the 10.0.0.0/8 range is correctly represented."
   }
 ]
