@@ -1,202 +1,122 @@
 [
   {
-    "question": "What is the primary function of the Data Link layer in the OSI model?",
+    "category": "{{$json.category}}",
+    "question": "What is the largest organ in the human body?",
     "options": [
-      "A. Routing packets between networks",
-      "B. Ensuring end-to-end reliable delivery",
-      "C. Managing physical addressing (MAC addresses) and error detection/correction",
-      "D. Providing user interface for network services"
+      "Heart",
+      "Brain",
+      "Skin",
+      "Liver"
     ],
-    "answer": "C"
+    "answer": "Skin",
+    "explanation": "The skin is the largest organ of the human body, covering an area of about 2 square meters in adults."
   },
   {
-    "question": "Which layer of the TCP/IP model combines the functions of the OSI model's Physical and Data Link layers?",
+    "category": "{{$json.category}}",
+    "question": "Which planet is known as the 'Red Planet'?",
     "options": [
-      "A. Application Layer",
-      "B. Transport Layer",
-      "C. Internet Layer",
-      "D. Network Access Layer"
+      "Earth",
+      "Mars",
+      "Jupiter",
+      "Venus"
     ],
-    "answer": "D"
+    "answer": "Mars",
+    "explanation": "Mars is often called the Red Planet because of the iron oxide prevalent on its surface, which gives it a reddish appearance."
   },
   {
-    "question": "Which protocol is connection-oriented and provides reliable data transfer?",
+    "category": "{{$json.category}}",
+    "question": "Who painted the Mona Lisa?",
     "options": [
-      "A. UDP",
-      "B. IP",
-      "C. TCP",
-      "D. ARP"
+      "Vincent van Gogh",
+      "Pablo Picasso",
+      "Leonardo da Vinci",
+      "Claude Monet"
     ],
-    "answer": "C"
+    "answer": "Leonardo da Vinci",
+    "explanation": "The Mona Lisa is a half-length portrait painting by Italian artist Leonardo da Vinci, widely considered an archetypal masterpiece of the Italian Renaissance."
   },
   {
-    "question": "A device that connects different networks and forwards packets based on IP addresses is called a:",
+    "category": "{{$json.category}}",
+    "question": "What is the chemical symbol for water?",
     "options": [
-      "A. Switch",
-      "B. Hub",
-      "C. Router",
-      "D. Repeater"
+      "O2",
+      "CO2",
+      "H2O",
+      "NaCl"
     ],
-    "answer": "C"
+    "answer": "H2O",
+    "explanation": "Water is a chemical compound with the chemical formula H2O, meaning one molecule of water contains two hydrogen atoms and one oxygen atom."
   },
   {
-    "question": "Which of the following is a private IPv4 address range?",
+    "category": "{{$json.category}}",
+    "question": "How many continents are there in the world?",
     "options": [
-      "A. 11.0.0.0 - 11.255.255.255",
-      "B. 172.16.0.0 - 172.31.255.255",
-      "C. 190.0.0.0 - 190.255.255.255",
-      "D. 200.0.0.0 - 200.255.255.255"
+      "5",
+      "6",
+      "7",
+      "8"
     ],
-    "answer": "B"
+    "answer": "7",
+    "explanation": "There are generally considered to be seven continents: Asia, Africa, North America, South America, Antarctica, Europe, and Australia."
   },
   {
-    "question": "What is the primary purpose of DNS?",
+    "category": "{{$json.category}}",
+    "question": "Which ocean is the largest on Earth?",
     "options": [
-      "A. To assign IP addresses dynamically",
-      "B. To translate domain names into IP addresses",
-      "C. To encrypt network traffic",
-      "D. To manage network access control"
+      "Atlantic Ocean",
+      "Indian Ocean",
+      "Arctic Ocean",
+      "Pacific Ocean"
     ],
-    "answer": "B"
+    "answer": "Pacific Ocean",
+    "explanation": "The Pacific Ocean is the largest and deepest of Earth's five oceanic divisions, covering about one-third of the surface of the Earth."
   },
   {
-    "question": "Which port number is typically used by HTTP?",
+    "category": "{{$json.category}}",
+    "question": "What is the capital city of Japan?",
     "options": [
-      "A. 21",
-      "B. 23",
-      "C. 80",
-      "D. 443"
+      "Seoul",
+      "Beijing",
+      "Tokyo",
+      "Bangkok"
     ],
-    "answer": "C"
+    "answer": "Tokyo",
+    "explanation": "Tokyo is the capital and most populous prefecture of Japan, located at the head of Tokyo Bay."
   },
   {
-    "question": "A network that spans a large geographical area, typically connecting multiple LANs, is called a:",
+    "category": "{{$json.category}}",
+    "question": "Which famous scientist developed the theory of relativity?",
     "options": [
-      "A. LAN",
-      "B. WAN",
-      "C. MAN",
-      "D. PAN"
+      "Isaac Newton",
+      "Albert Einstein",
+      "Galileo Galilei",
+      "Stephen Hawking"
     ],
-    "answer": "B"
+    "answer": "Albert Einstein",
+    "explanation": "Albert Einstein was a German-born theoretical physicist who developed the theory of relativity, one of the two pillars of modern physics."
   },
   {
-    "question": "Which layer of the OSI model is responsible for providing services to the user applications?",
+    "category": "{{$json.category}}",
+    "question": "What is the process by which plants make their own food?",
     "options": [
-      "A. Presentation Layer",
-      "B. Session Layer",
-      "C. Application Layer",
-      "D. Transport Layer"
+      "Respiration",
+      "Transpiration",
+      "Germination",
+      "Photosynthesis"
     ],
-    "answer": "C"
+    "answer": "Photosynthesis",
+    "explanation": "Photosynthesis is the process used by plants, algae, and certain bacteria to convert light energy into chemical energy that can be later released to fuel the organisms' activities."
   },
   {
-    "question": "A MAC address is a __________-bit physical address.",
+    "category": "{{$json.category}}",
+    "question": "Which of these is not a primary color of light?",
     "options": [
-      "A. 16",
-      "B. 32",
-      "C. 48",
-      "D. 64"
+      "Red",
+      "Green",
+      "Blue",
+      "Yellow"
     ],
-    "answer": "C"
-  },
-  {
-    "question": "What is the default subnet mask for a Class C IP address?",
-    "options": [
-      "A. 255.0.0.0",
-      "B. 255.255.0.0",
-      "C. 255.255.255.0",
-      "D. 255.255.255.255"
-    ],
-    "answer": "C"
-  },
-  {
-    "question": "What does DHCP stand for?",
-    "options": [
-      "A. Dynamic Host Configuration Protocol",
-      "B. Data Host Control Protocol",
-      "C. Distributed Hypertext Communication Protocol",
-      "D. Domain Host Connection Procedure"
-    ],
-    "answer": "A"
-  },
-  {
-    "question": "What is the main difference between a network hub and a network switch?",
-    "options": [
-      "A. A hub operates at the Network layer, while a switch operates at the Data Link layer.",
-      "B. A hub broadcasts all traffic, while a switch sends traffic only to the intended recipient.",
-      "C. A hub has fewer ports than a switch.",
-      "D. A hub is more expensive than a switch."
-    ],
-    "answer": "B"
-  },
-  {
-    "question": "The time it takes for a data packet to travel from its source to its destination is called:",
-    "options": [
-      "A. Bandwidth",
-      "B. Throughput",
-      "C. Latency",
-      "D. Jitter"
-    ],
-    "answer": "C"
-  },
-  {
-    "question": "What is the primary function of a firewall?",
-    "options": [
-      "A. To boost network signal strength",
-      "B. To prevent unauthorized access to a network",
-      "C. To convert analog signals to digital signals",
-      "D. To assign IP addresses to devices"
-    ],
-    "answer": "B"
-  },
-  {
-    "question": "How many bits are in an IPv6 address?",
-    "options": [
-      "A. 32 bits",
-      "B. 64 bits",
-      "C. 128 bits",
-      "D. 256 bits"
-    ],
-    "answer": "C"
-  },
-  {
-    "question": "What protocol is used to resolve an IP address to a MAC address?",
-    "options": [
-      "A. DNS",
-      "B. RARP",
-      "C. ICMP",
-      "D. ARP"
-    ],
-    "answer": "D"
-  },
-  {
-    "question": "In which network topology are all devices connected to a central hub or switch?",
-    "options": [
-      "A. Bus",
-      "B. Ring",
-      "C. Star",
-      "D. Mesh"
-    ],
-    "answer": "C"
-  },
-  {
-    "question": "The process of breaking down data into smaller units suitable for transmission across a network is called:",
-    "options": [
-      "A. Encapsulation",
-      "B. Segmentation",
-      "C. Routing",
-      "D. Addressing"
-    ],
-    "answer": "B"
-  },
-  {
-    "question": "Which port number is typically used for HTTPS?",
-    "options": [
-      "A. 80",
-      "B. 443",
-      "C. 21",
-      "D. 25"
-    ],
-    "answer": "B"
+    "answer": "Yellow",
+    "explanation": "The primary colors of light (additive primaries) are Red, Green, and Blue (RGB). Yellow is a secondary color, formed by mixing red and green light."
   }
 ]
