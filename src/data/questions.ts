@@ -648,7 +648,9 @@ export const allQuestions: Question[] = [
   ...linux,
   ...aws,
   ...networking,
+  ...networkingExtra,
   ...windowsServer,
+  ...windowsServerExtra,
   ...devops,
   ...docker,
   ...kubernetes,
@@ -670,6 +672,22 @@ export const allQuestions: Question[] = [
   ...dbms,
   ...operatingSystem,
   ...computerNetworks,
+  // Interview
+  ...interviewDesktopSupport,
+  ...interviewActiveDirectory,
+  ...interviewOffice365,
+  ...interviewNetworking,
+  ...interviewWindowsServer,
+  ...interviewLinux,
+  ...interviewCloud,
+  // Engineering & GATE
+  ...gateComputerNetworks,
+  ...gateOperatingSystem,
+  ...gateDbms,
+  ...gateDataStructures,
+  ...gateOops,
+  ...gateSoftwareEngineering,
+  ...gateAptitude,
 ];
 
 export const questionsByCategory = (slug: string) =>
