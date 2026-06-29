@@ -645,6 +645,133 @@ const computerNetworks: Question[] = [
 ];
 
 export const allQuestions: Question[] = [
+const networkingExtra: Question[] = [
+  { id: "nw-36", category: "networking", question: "Which protocol resolves a hostname to an IP address?", options: ["DNS", "DHCP", "ARP", "ICMP"], correctIndex: 0, explanation: "DNS resolves human-readable hostnames into IP addresses." },
+  { id: "nw-37", category: "networking", question: "What is the default port for SMTP?", options: ["25", "110", "143", "443"], correctIndex: 0, explanation: "SMTP uses TCP port 25 for mail relay (587 for submission)." },
+  { id: "nw-38", category: "networking", question: "Which command tests connectivity by sending ICMP echo requests?", options: ["ping", "tracert", "netstat", "ipconfig"], correctIndex: 0, explanation: "`ping` sends ICMP echo requests to verify reachability." },
+  { id: "nw-39", category: "networking", question: "What is the broadcast address of 192.168.1.0/24?", options: ["192.168.1.255", "192.168.1.0", "192.168.1.254", "192.168.1.1"], correctIndex: 0, explanation: "The last address in a /24 (.255) is the broadcast address." },
+  { id: "nw-40", category: "networking", question: "Which protocol is used to securely manage network devices?", options: ["SSH", "Telnet", "FTP", "HTTP"], correctIndex: 0, explanation: "SSH provides encrypted remote management; Telnet sends data in cleartext." },
+  { id: "nw-41", category: "networking", question: "Which device segments a network into smaller collision domains?", options: ["Switch", "Hub", "Repeater", "Modem"], correctIndex: 0, explanation: "A switch creates a separate collision domain per port." },
+  { id: "nw-42", category: "networking", question: "Which protocol provides secure web browsing?", options: ["HTTPS", "HTTP", "FTP", "SMTP"], correctIndex: 0, explanation: "HTTPS = HTTP over TLS, encrypting web traffic." },
+  { id: "nw-43", category: "networking", question: "Which class does 10.0.0.0 belong to?", options: ["Class A", "Class B", "Class C", "Class D"], correctIndex: 0, explanation: "10.0.0.0/8 is a private Class A range." },
+  { id: "nw-44", category: "networking", question: "Which technology connects two private networks over the public internet?", options: ["VPN", "VLAN", "NAT", "DNS"], correctIndex: 0, explanation: "A VPN creates an encrypted tunnel across an untrusted network." },
+  { id: "nw-45", category: "networking", question: "Which protocol carries voice over IP?", options: ["SIP", "SMTP", "SNMP", "POP3"], correctIndex: 0, explanation: "SIP signals VoIP calls; RTP carries the media stream." },
+  { id: "nw-46", category: "networking", question: "What is the default administrative distance of OSPF?", options: ["110", "90", "120", "1"], correctIndex: 0, explanation: "OSPF has an AD of 110 by Cisco defaults." },
+  { id: "nw-47", category: "networking", question: "Which command on Windows shows the route a packet takes?", options: ["tracert", "ping", "netstat", "route"], correctIndex: 0, explanation: "`tracert` traces each hop a packet takes to a destination." },
+  { id: "nw-48", category: "networking", question: "Which protocol provides automatic IP address renewal?", options: ["DHCP", "DNS", "ARP", "ICMP"], correctIndex: 0, explanation: "DHCP clients renew leases periodically with the DHCP server." },
+  { id: "nw-49", category: "networking", question: "Which standard defines wireless LAN?", options: ["802.11", "802.3", "802.1Q", "802.5"], correctIndex: 0, explanation: "IEEE 802.11 is the family of Wi-Fi standards." },
+  { id: "nw-50", category: "networking", question: "Which protocol synchronizes time across devices?", options: ["NTP", "SNMP", "FTP", "ICMP"], correctIndex: 0, explanation: "NTP keeps clocks in sync over the network." },
+  { id: "nw-51", category: "networking", question: "Which port does SNMP use?", options: ["161", "162", "514", "69"], correctIndex: 0, explanation: "SNMP agents listen on UDP 161; traps go to 162." },
+  { id: "nw-52", category: "networking", question: "What does NAT primarily do?", options: ["Translates private to public IPs", "Encrypts traffic", "Assigns IPs", "Routes BGP"], correctIndex: 0, explanation: "NAT translates addresses, often private to public, to share a single public IP." },
+  { id: "nw-53", category: "networking", question: "Which protocol exchanges routing information between autonomous systems?", options: ["BGP", "OSPF", "RIP", "EIGRP"], correctIndex: 0, explanation: "BGP is the inter-AS routing protocol of the Internet." },
+  { id: "nw-54", category: "networking", question: "Which command shows the MAC address table on Cisco IOS?", options: ["show mac address-table", "show arp", "show interfaces", "show vlan"], correctIndex: 0, explanation: "`show mac address-table` lists learned MAC addresses per port." },
+  { id: "nw-55", category: "networking", question: "What is the size of a standard Ethernet MAC address?", options: ["48 bits", "32 bits", "64 bits", "16 bits"], correctIndex: 0, explanation: "MAC addresses are 48 bits (6 bytes)." },
+];
+
+const windowsServerExtra: Question[] = [
+  { id: "ws-36", category: "windows-server", question: "Which tool is used to manage local users and groups on Windows Server?", options: ["lusrmgr.msc", "dsa.msc", "gpedit.msc", "services.msc"], correctIndex: 0, explanation: "`lusrmgr.msc` opens the Local Users and Groups MMC." },
+  { id: "ws-37", category: "windows-server", question: "Which command forces a Group Policy update on a client?", options: ["gpupdate /force", "gpresult", "secedit", "policychk"], correctIndex: 0, explanation: "`gpupdate /force` reapplies all GPOs immediately." },
+  { id: "ws-38", category: "windows-server", question: "Which log captures successful and failed logon attempts?", options: ["Security log", "System log", "Application log", "Setup log"], correctIndex: 0, explanation: "Logon auditing events are written to the Security event log." },
+  { id: "ws-39", category: "windows-server", question: "Which tool creates a system image backup?", options: ["Windows Server Backup", "WSUS", "DISM", "BCDEdit"], correctIndex: 0, explanation: "Windows Server Backup performs full and bare-metal recovery backups." },
+  { id: "ws-40", category: "windows-server", question: "Which PowerShell cmdlet lists installed roles and features?", options: ["Get-WindowsFeature", "Get-Role", "Get-Service", "Get-Package"], correctIndex: 0, explanation: "`Get-WindowsFeature` lists roles and features and their state." },
+  { id: "ws-41", category: "windows-server", question: "What is the default password policy minimum length on a fresh domain?", options: ["7", "0", "14", "8"], correctIndex: 0, explanation: "The default Domain Password Policy requires a minimum length of 7." },
+  { id: "ws-42", category: "windows-server", question: "Which FSMO role allocates RIDs to domain controllers?", options: ["RID Master", "PDC Emulator", "Schema Master", "Infrastructure Master"], correctIndex: 0, explanation: "The RID Master allocates pools of relative IDs to DCs." },
+  { id: "ws-43", category: "windows-server", question: "Which command verifies the health of a domain controller?", options: ["dcdiag", "ipconfig", "nslookup", "ping"], correctIndex: 0, explanation: "`dcdiag` runs a battery of tests on DC health." },
+  { id: "ws-44", category: "windows-server", question: "Which feature lets you push images of Windows over the network?", options: ["WDS", "WSUS", "DFS", "RDS"], correctIndex: 0, explanation: "Windows Deployment Services deploys OS images via PXE." },
+  { id: "ws-45", category: "windows-server", question: "Which command lists open shares on a Windows Server?", options: ["net share", "net use", "net view", "net session"], correctIndex: 0, explanation: "`net share` lists all shared folders on the local host." },
+  { id: "ws-46", category: "windows-server", question: "Which protocol does Windows file sharing use?", options: ["SMB", "NFS", "FTP", "SFTP"], correctIndex: 0, explanation: "SMB (Server Message Block) is the native Windows file sharing protocol." },
+  { id: "ws-47", category: "windows-server", question: "Which tool manages DHCP scopes via GUI?", options: ["DHCP Console", "DNS Manager", "Server Manager", "Event Viewer"], correctIndex: 0, explanation: "The DHCP MMC manages scopes, reservations and options." },
+  { id: "ws-48", category: "windows-server", question: "Which command in Server Core changes the computer name?", options: ["Rename-Computer", "Set-Hostname", "Change-Name", "Set-Computer"], correctIndex: 0, explanation: "`Rename-Computer -NewName` renames the system in PowerShell." },
+  { id: "ws-49", category: "windows-server", question: "Which type of GPO is processed last and wins by default?", options: ["OU-linked", "Site-linked", "Domain-linked", "Local"], correctIndex: 0, explanation: "Processing order is Local → Site → Domain → OU; OU-linked applies last and wins." },
+  { id: "ws-50", category: "windows-server", question: "What does the 'sysprep' tool do?", options: ["Prepares an image for duplication", "Resets passwords", "Repairs the registry", "Audits security"], correctIndex: 0, explanation: "Sysprep generalizes a Windows installation so it can be imaged and deployed." },
+  { id: "ws-51", category: "windows-server", question: "Which cmdlet creates a new AD user?", options: ["New-ADUser", "Add-ADUser", "Create-ADUser", "Set-ADUser"], correctIndex: 0, explanation: "`New-ADUser` provisions a new user in Active Directory." },
+  { id: "ws-52", category: "windows-server", question: "Which Windows feature provides BitLocker key escrow?", options: ["AD DS", "AD CS", "AD FS", "WSUS"], correctIndex: 0, explanation: "BitLocker recovery keys can be stored in AD DS." },
+  { id: "ws-53", category: "windows-server", question: "Which tool helps schedule scripts and tasks?", options: ["Task Scheduler", "Event Viewer", "Performance Monitor", "Resource Monitor"], correctIndex: 0, explanation: "Task Scheduler runs scripts and programs on schedule or events." },
+  { id: "ws-54", category: "windows-server", question: "Which command tests DNS resolution from the command line?", options: ["nslookup", "ipconfig", "ping -a", "tracert"], correctIndex: 0, explanation: "`nslookup` queries DNS for forward/reverse records." },
+  { id: "ws-55", category: "windows-server", question: "Which port does Active Directory use for global catalog queries?", options: ["3268", "389", "636", "445"], correctIndex: 0, explanation: "Global Catalog uses TCP 3268 (3269 for SSL)." },
+];
+
+const interviewDesktopSupport: Question[] = [
+  { id: "int-ds-1", category: "interview-desktop-support", question: "A user complains their PC is stuck on the Windows logo. What is the FIRST step?", options: ["Boot into Safe Mode", "Reinstall Windows", "Replace hard drive", "Change BIOS"], correctIndex: 0, explanation: "Safe Mode isolates third-party drivers/services and is the standard first triage step." },
+  { id: "int-ds-2", category: "interview-desktop-support", question: "User says 'no internet' but other users work fine. Where do you start?", options: ["Check the user's NIC/Wi-Fi and IP config", "Reboot the core router", "Reinstall Windows", "Replace the switch"], correctIndex: 0, explanation: "Isolate to the affected host first: link status, IP, gateway, DNS." },
+  { id: "int-ds-3", category: "interview-desktop-support", question: "Which command clears the DNS resolver cache on Windows?", options: ["ipconfig /flushdns", "ipconfig /release", "nslookup -reset", "netsh dns reset"], correctIndex: 0, explanation: "`ipconfig /flushdns` clears stale DNS entries from the client cache." },
+  { id: "int-ds-4", category: "interview-desktop-support", question: "A printer shows offline but is powered on and pingable. Next step?", options: ["Restart the Print Spooler service", "Reformat the PC", "Replace the printer", "Disable firewall permanently"], correctIndex: 0, explanation: "The Print Spooler often hangs; restarting it clears stuck queues." },
+];
+
+const interviewActiveDirectory: Question[] = [
+  { id: "int-ad-1", category: "interview-active-directory", question: "What command would you use to check replication health between DCs?", options: ["repadmin /replsummary", "gpresult /r", "dcpromo", "netdom"], correctIndex: 0, explanation: "`repadmin /replsummary` summarizes inbound/outbound replication health." },
+  { id: "int-ad-2", category: "interview-active-directory", question: "A user account keeps getting locked out repeatedly. What do you check?", options: ["Stored credentials, mapped drives, mobile devices", "Reinstall AD", "Reset the domain", "Disable lockout policy permanently"], correctIndex: 0, explanation: "Old cached creds on phones, services, or mapped drives commonly cause repeated lockouts." },
+  { id: "int-ad-3", category: "interview-active-directory", question: "Which tool moves FSMO roles between domain controllers?", options: ["ntdsutil", "dcdiag", "repadmin", "adsiedit"], correctIndex: 0, explanation: "`ntdsutil` can seize or transfer FSMO roles." },
+  { id: "int-ad-4", category: "interview-active-directory", question: "Where are Group Policy files replicated to all DCs?", options: ["SYSVOL", "NETLOGON only", "NTDS.dit", "C:\\Windows"], correctIndex: 0, explanation: "SYSVOL holds GPO files and logon scripts and is replicated by DFSR." },
+];
+
+const interviewOffice365: Question[] = [
+  { id: "int-o365-1", category: "interview-office365", question: "Which portal manages Microsoft 365 users and licenses?", options: ["Microsoft 365 Admin Center", "Azure DevOps", "Intune App", "Power BI"], correctIndex: 0, explanation: "The M365 Admin Center handles users, groups and license assignment." },
+  { id: "int-o365-2", category: "interview-office365", question: "User cannot receive external email but internal mail works. What do you check first?", options: ["MX records and connectors", "User mailbox quota only", "Outlook profile", "Reinstall Office"], correctIndex: 0, explanation: "External mail flow depends on MX records and inbound connectors." },
+  { id: "int-o365-3", category: "interview-office365", question: "Which tool connects to Exchange Online via PowerShell?", options: ["Exchange Online Management module", "AzureAD module only", "MSOnline only", "WinRM"], correctIndex: 0, explanation: "`Connect-ExchangeOnline` from the EXO module opens a remote PowerShell session." },
+];
+
+const interviewNetworking: Question[] = [
+  { id: "int-nw-1", category: "interview-networking", question: "User can ping by IP but not by name. What is the likely cause?", options: ["DNS resolution issue", "NIC is unplugged", "Switch port is down", "DHCP server is offline"], correctIndex: 0, explanation: "Successful IP ping with failed name resolution points to DNS." },
+  { id: "int-nw-2", category: "interview-networking", question: "Multiple users on one floor lose connectivity. What is the most likely cause?", options: ["Access switch or uplink failure", "Their individual NICs all failed", "A single user's password expired", "Browser cache"], correctIndex: 0, explanation: "Common access-layer device (switch/uplink) most likely impacts a whole floor." },
+  { id: "int-nw-3", category: "interview-networking", question: "Which command shows live latency hop-by-hop?", options: ["pathping", "ipconfig", "arp", "netsh"], correctIndex: 0, explanation: "`pathping` combines tracert with per-hop loss/latency stats." },
+  { id: "int-nw-4", category: "interview-networking", question: "VLAN 20 users cannot reach VLAN 30. What is required?", options: ["Inter-VLAN routing on an L3 device", "More switch ports", "A new DHCP scope only", "Disabling the firewall"], correctIndex: 0, explanation: "VLANs are isolated L2 broadcast domains and need an L3 router/SVI to communicate." },
+];
+
+const interviewWindowsServer: Question[] = [
+  { id: "int-ws-1", category: "interview-windows-server", question: "How do you check what is consuming CPU on a Windows Server in real time?", options: ["Task Manager / Resource Monitor / Get-Process", "Event Viewer only", "Disk Cleanup", "Defragmenter"], correctIndex: 0, explanation: "Live CPU usage is investigated via Task Manager, Resource Monitor or `Get-Process` sorted by CPU." },
+  { id: "int-ws-2", category: "interview-windows-server", question: "C: drive on a server is full. First safe action?", options: ["Investigate large files (WinDirStat) and clear logs/temp", "Format the drive", "Reinstall Windows", "Delete System32"], correctIndex: 0, explanation: "Identify large consumers (logs, IIS, temp, WSUS) before any destructive action." },
+  { id: "int-ws-3", category: "interview-windows-server", question: "Which tool centralizes logs from multiple Windows Servers?", options: ["Windows Event Forwarding (WEF)", "WSUS", "DFS", "BitLocker"], correctIndex: 0, explanation: "WEF subscribes collectors to events from source machines." },
+];
+
+const interviewLinux: Question[] = [
+  { id: "int-lx-1", category: "interview-linux", question: "How do you find which process is using port 8080 on Linux?", options: ["ss -ltnp | grep 8080 (or lsof -i :8080)", "ps -ef only", "top", "df -h"], correctIndex: 0, explanation: "`ss` (or `lsof -i`) maps listening sockets to processes." },
+  { id: "int-lx-2", category: "interview-linux", question: "A server has high load average but low CPU. What do you check?", options: ["I/O wait and disk performance", "Number of users", "Hostname", "Kernel version"], correctIndex: 0, explanation: "Load includes uninterruptible (I/O) tasks; check `iostat`, `iotop`." },
+  { id: "int-lx-3", category: "interview-linux", question: "How do you make a service start on boot in systemd?", options: ["systemctl enable <service>", "chkconfig on", "service start", "init 5"], correctIndex: 0, explanation: "`systemctl enable` creates the boot-time symlink for the unit." },
+];
+
+const interviewCloud: Question[] = [
+  { id: "int-cl-1", category: "interview-cloud", question: "An EC2 instance is unreachable on port 443. What do you check first?", options: ["Security Group and NACL rules", "Billing dashboard", "IAM password policy", "Route 53 health"], correctIndex: 0, explanation: "Network reachability on AWS is governed by Security Groups and subnet NACLs." },
+  { id: "int-cl-2", category: "interview-cloud", question: "Which AWS service is best to grant temporary credentials to apps on EC2?", options: ["IAM Roles for EC2 (instance profile)", "Long-lived access keys in code", "Root credentials", "S3 bucket policies"], correctIndex: 0, explanation: "Instance profiles deliver rotating, short-lived credentials via the metadata service." },
+  { id: "int-cl-3", category: "interview-cloud", question: "How do you make an S3 bucket privately accessible only to a VPC?", options: ["Use a VPC Gateway Endpoint and bucket policy restricting source VPCE", "Disable encryption", "Public-read ACL", "Open security groups"], correctIndex: 0, explanation: "Gateway endpoints + bucket policies scoped to the endpoint enforce private VPC-only access." },
+];
+
+const gateComputerNetworks: Question[] = [
+  { id: "gt-cn-1", category: "gate-computer-networks", question: "Maximum window size in TCP using a 16-bit window field (no scaling)?", options: ["65535 bytes", "32767 bytes", "1024 bytes", "4096 bytes"], correctIndex: 0, explanation: "16-bit field gives 2^16 - 1 = 65535 bytes." },
+  { id: "gt-cn-2", category: "gate-computer-networks", question: "Which layer provides end-to-end reliable delivery?", options: ["Transport", "Network", "Data Link", "Session"], correctIndex: 0, explanation: "Transport (e.g., TCP) handles end-to-end reliability." },
+];
+
+const gateOperatingSystem: Question[] = [
+  { id: "gt-os-1", category: "gate-operating-system", question: "Which scheduling algorithm gives minimum average waiting time?", options: ["Shortest Job First (SJF)", "FCFS", "Round Robin", "Priority"], correctIndex: 0, explanation: "SJF is provably optimal for average waiting time." },
+  { id: "gt-os-2", category: "gate-operating-system", question: "Deadlock requires which of these conditions to all hold?", options: ["Mutual exclusion, hold-and-wait, no preemption, circular wait", "Only mutual exclusion", "Only circular wait", "Starvation"], correctIndex: 0, explanation: "Coffman's four conditions must all hold simultaneously for deadlock." },
+];
+
+const gateDbms: Question[] = [
+  { id: "gt-db-1", category: "gate-dbms", question: "A relation is in 3NF if it is in 2NF and ...", options: ["No transitive dependency of non-prime attribute on key", "Has a primary key", "Has no NULLs", "Is in BCNF"], correctIndex: 0, explanation: "3NF removes transitive dependencies of non-prime attributes on the candidate key." },
+  { id: "gt-db-2", category: "gate-dbms", question: "Which SQL clause is used to filter aggregated rows?", options: ["HAVING", "WHERE", "GROUP BY", "ORDER BY"], correctIndex: 0, explanation: "`HAVING` filters after `GROUP BY` aggregation." },
+];
+
+const gateDataStructures: Question[] = [
+  { id: "gt-ds-1", category: "gate-data-structures", question: "Worst-case time complexity of inserting into a balanced BST?", options: ["O(log n)", "O(1)", "O(n)", "O(n log n)"], correctIndex: 0, explanation: "Balanced BSTs (AVL, Red-Black) keep insertions at O(log n)." },
+  { id: "gt-ds-2", category: "gate-data-structures", question: "Which data structure is used for BFS traversal?", options: ["Queue", "Stack", "Heap", "Tree"], correctIndex: 0, explanation: "BFS uses a FIFO queue to explore neighbors level by level." },
+];
+
+const gateOops: Question[] = [
+  { id: "gt-oop-1", category: "gate-oops", question: "Which OOP feature allows the same method to behave differently?", options: ["Polymorphism", "Encapsulation", "Abstraction", "Inheritance"], correctIndex: 0, explanation: "Polymorphism lets a single interface represent different underlying behaviors." },
+  { id: "gt-oop-2", category: "gate-oops", question: "Which keyword in Java prevents method overriding?", options: ["final", "static", "private", "abstract"], correctIndex: 0, explanation: "Methods declared `final` cannot be overridden by subclasses." },
+];
+
+const gateSoftwareEngineering: Question[] = [
+  { id: "gt-se-1", category: "gate-software-engineering", question: "Which SDLC model emphasizes iterative releases and customer feedback?", options: ["Agile", "Waterfall", "V-Model", "Big Bang"], correctIndex: 0, explanation: "Agile delivers in short iterations with continuous feedback." },
+  { id: "gt-se-2", category: "gate-software-engineering", question: "Which testing level checks individual functions or classes?", options: ["Unit testing", "Integration testing", "System testing", "Acceptance testing"], correctIndex: 0, explanation: "Unit tests verify the smallest pieces of code in isolation." },
+];
+
+const gateAptitude: Question[] = [
+  { id: "gt-ap-1", category: "gate-aptitude", question: "If 3x + 2 = 11, then x = ?", options: ["3", "2", "4", "5"], correctIndex: 0, explanation: "3x = 9, so x = 3." },
+  { id: "gt-ap-2", category: "gate-aptitude", question: "A train 120 m long crosses a pole in 6 s. Its speed (m/s) is?", options: ["20", "10", "15", "12"], correctIndex: 0, explanation: "Speed = distance/time = 120/6 = 20 m/s." },
+];
+
+export const allQuestions: Question[] = [
   ...linux,
   ...aws,
   ...networking,
