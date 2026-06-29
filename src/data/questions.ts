@@ -644,7 +644,6 @@ const computerNetworks: Question[] = [
   { id: "cn-15", category: "computer-networks", question: "Firewall operates primarily at?", options: ["L1", "L3/L4 (and L7 for application firewalls)", "L7 only", "L2 only"], correctIndex: 1, explanation: "Traditional firewalls work at L3/L4; NGFWs add L7." },
 ];
 
-export const allQuestions: Question[] = [
 const networkingExtra: Question[] = [
   { id: "nw-36", category: "networking", question: "Which protocol resolves a hostname to an IP address?", options: ["DNS", "DHCP", "ARP", "ICMP"], correctIndex: 0, explanation: "DNS resolves human-readable hostnames into IP addresses." },
   { id: "nw-37", category: "networking", question: "What is the default port for SMTP?", options: ["25", "110", "143", "443"], correctIndex: 0, explanation: "SMTP uses TCP port 25 for mail relay (587 for submission)." },
