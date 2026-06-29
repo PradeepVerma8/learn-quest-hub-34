@@ -235,6 +235,108 @@ export const categories: Category[] = [
     icon: "🔗",
     group: "computer-science",
   },
+
+  // ================= Interview =================
+  {
+    slug: "interview-desktop-support",
+    name: "Desktop Support Interview",
+    description: "Desktop support engineer interview Q&A",
+    icon: "🖥️",
+    group: "interview",
+  },
+  {
+    slug: "interview-active-directory",
+    name: "Active Directory Interview",
+    description: "AD, GPO and domain interview Q&A",
+    icon: "🗂️",
+    group: "interview",
+  },
+  {
+    slug: "interview-office365",
+    name: "Office 365 Interview",
+    description: "M365, Exchange Online and Teams Q&A",
+    icon: "📧",
+    group: "interview",
+  },
+  {
+    slug: "interview-networking",
+    name: "Networking Interview",
+    description: "Networking troubleshooting interview Q&A",
+    icon: "🌐",
+    group: "interview",
+  },
+  {
+    slug: "interview-windows-server",
+    name: "Windows Server Interview",
+    description: "Windows Server admin interview Q&A",
+    icon: "🪟",
+    group: "interview",
+  },
+  {
+    slug: "interview-linux",
+    name: "Linux Interview",
+    description: "Linux admin interview Q&A",
+    icon: "🐧",
+    group: "interview",
+  },
+  {
+    slug: "interview-cloud",
+    name: "Cloud Interview",
+    description: "AWS / Azure / GCP interview Q&A",
+    icon: "☁️",
+    group: "interview",
+  },
+
+  // ================= Engineering & GATE =================
+  {
+    slug: "gate-computer-networks",
+    name: "GATE Computer Networks",
+    description: "GATE level Computer Networks MCQs",
+    icon: "🔗",
+    group: "engineering-gate",
+  },
+  {
+    slug: "gate-operating-system",
+    name: "GATE Operating Systems",
+    description: "OS scheduling, memory and concurrency",
+    icon: "💾",
+    group: "engineering-gate",
+  },
+  {
+    slug: "gate-dbms",
+    name: "GATE DBMS",
+    description: "Relational model, SQL and normalization",
+    icon: "🗄️",
+    group: "engineering-gate",
+  },
+  {
+    slug: "gate-data-structures",
+    name: "GATE Data Structures",
+    description: "Arrays, trees, graphs and complexity",
+    icon: "📊",
+    group: "engineering-gate",
+  },
+  {
+    slug: "gate-oops",
+    name: "GATE OOPs",
+    description: "Object oriented programming concepts",
+    icon: "🧩",
+    group: "engineering-gate",
+  },
+  {
+    slug: "gate-software-engineering",
+    name: "GATE Software Engineering",
+    description: "SDLC, models and testing",
+    icon: "🛠️",
+    group: "engineering-gate",
+  },
+  {
+    slug: "gate-aptitude",
+    name: "GATE Aptitude",
+    description: "Quantitative and logical aptitude",
+    icon: "➗",
+    group: "engineering-gate",
+  },
 ];
 
 export const getCategory = (slug: string) =>
