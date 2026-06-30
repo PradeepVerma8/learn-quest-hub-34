@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CategoriesRouteImport } from './routes/categories'
 import { Route as AdsenseRouteImport } from './routes/adsense'
@@ -22,6 +23,11 @@ import { Route as CategorySlugRouteImport } from './routes/category.$slug'
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -71,6 +77,7 @@ export interface FileRoutesByFullPath {
   '/adsense': typeof AdsenseRoute
   '/categories': typeof CategoriesRoute
   '/contact': typeof ContactRoute
+  '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/category/$slug': typeof CategorySlugRoute
   '/group/$slug': typeof GroupSlugRoute
@@ -82,6 +89,7 @@ export interface FileRoutesByTo {
   '/adsense': typeof AdsenseRoute
   '/categories': typeof CategoriesRoute
   '/contact': typeof ContactRoute
+  '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/category/$slug': typeof CategorySlugRoute
   '/group/$slug': typeof GroupSlugRoute
@@ -94,6 +102,7 @@ export interface FileRoutesById {
   '/adsense': typeof AdsenseRoute
   '/categories': typeof CategoriesRoute
   '/contact': typeof ContactRoute
+  '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/category/$slug': typeof CategorySlugRoute
   '/group/$slug': typeof GroupSlugRoute
@@ -107,6 +116,7 @@ export interface FileRouteTypes {
     | '/adsense'
     | '/categories'
     | '/contact'
+    | '/privacy'
     | '/sitemap.xml'
     | '/category/$slug'
     | '/group/$slug'
@@ -118,6 +128,7 @@ export interface FileRouteTypes {
     | '/adsense'
     | '/categories'
     | '/contact'
+    | '/privacy'
     | '/sitemap.xml'
     | '/category/$slug'
     | '/group/$slug'
@@ -129,6 +140,7 @@ export interface FileRouteTypes {
     | '/adsense'
     | '/categories'
     | '/contact'
+    | '/privacy'
     | '/sitemap.xml'
     | '/category/$slug'
     | '/group/$slug'
@@ -141,6 +153,7 @@ export interface RootRouteChildren {
   AdsenseRoute: typeof AdsenseRoute
   CategoriesRoute: typeof CategoriesRoute
   ContactRoute: typeof ContactRoute
+  PrivacyRoute: typeof PrivacyRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   CategorySlugRoute: typeof CategorySlugRoute
   GroupSlugRoute: typeof GroupSlugRoute
@@ -154,6 +167,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -221,6 +241,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdsenseRoute: AdsenseRoute,
   CategoriesRoute: CategoriesRoute,
   ContactRoute: ContactRoute,
+  PrivacyRoute: PrivacyRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   CategorySlugRoute: CategorySlugRoute,
   GroupSlugRoute: GroupSlugRoute,
