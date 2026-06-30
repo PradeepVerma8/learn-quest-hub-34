@@ -10,6 +10,13 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { groups } from "@/data/categories";
 
+const aboutLinks = [
+  { to: "/about", label: "About Us" },
+  { to: "/privacy", label: "Privacy Policy" },
+  { to: "/terms", label: "Terms & Conditions" },
+  { to: "/disclaimer", label: "Disclaimer" },
+] as const;
+
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
@@ -49,6 +56,23 @@ export function SiteHeader() {
           <Button variant="ghost" asChild>
             <Link to="/adsense">Google AdSense</Link>
           </Button>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" className="gap-1">
+                About <ChevronDown className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end" className="w-56">
+              {aboutLinks.map((l) => (
+                <DropdownMenuItem key={l.to} asChild>
+                  <Link to={l.to}>{l.label}</Link>
+                </DropdownMenuItem>
+              ))}
+            </DropdownMenuContent>
+          </DropdownMenu>
+          <Button variant="ghost" asChild>
+            <Link to="/contact">Contact Us</Link>
+          </Button>
         </nav>
 
         {/* Mobile toggle */}
@@ -69,6 +93,13 @@ export function SiteHeader() {
             <Link to="/" onClick={() => setOpen(false)} className="px-2 py-2 rounded hover:bg-accent">Home</Link>
             <Link to="/categories" onClick={() => setOpen(false)} className="px-2 py-2 rounded hover:bg-accent">Categories</Link>
             <Link to="/adsense" onClick={() => setOpen(false)} className="px-2 py-2 rounded hover:bg-accent">Google AdSense</Link>
+            <Link to="/contact" onClick={() => setOpen(false)} className="px-2 py-2 rounded hover:bg-accent">Contact Us</Link>
+            <div className="mt-2 px-2 text-xs font-semibold uppercase text-muted-foreground">About</div>
+            {aboutLinks.map((l) => (
+              <Link key={l.to} to={l.to} onClick={() => setOpen(false)} className="px-2 py-2 rounded hover:bg-accent">
+                {l.label}
+              </Link>
+            ))}
             <div className="mt-2 px-2 text-xs font-semibold uppercase text-muted-foreground">Groups</div>
             {groups.map((g) => (
               <Link
