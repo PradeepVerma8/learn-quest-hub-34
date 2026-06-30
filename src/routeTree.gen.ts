@@ -10,7 +10,6 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as SearchRouteImport } from './routes/search'
 import { Route as CategoriesRouteImport } from './routes/categories'
 import { Route as AdsenseRouteImport } from './routes/adsense'
 import { Route as IndexRouteImport } from './routes/index'
@@ -21,11 +20,6 @@ import { Route as CategorySlugRouteImport } from './routes/category.$slug'
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SearchRoute = SearchRouteImport.update({
-  id: '/search',
-  path: '/search',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CategoriesRoute = CategoriesRouteImport.update({
@@ -63,7 +57,6 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/adsense': typeof AdsenseRoute
   '/categories': typeof CategoriesRoute
-  '/search': typeof SearchRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/category/$slug': typeof CategorySlugRoute
   '/group/$slug': typeof GroupSlugRoute
@@ -73,7 +66,6 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/adsense': typeof AdsenseRoute
   '/categories': typeof CategoriesRoute
-  '/search': typeof SearchRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/category/$slug': typeof CategorySlugRoute
   '/group/$slug': typeof GroupSlugRoute
@@ -84,7 +76,6 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/adsense': typeof AdsenseRoute
   '/categories': typeof CategoriesRoute
-  '/search': typeof SearchRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/category/$slug': typeof CategorySlugRoute
   '/group/$slug': typeof GroupSlugRoute
@@ -96,7 +87,6 @@ export interface FileRouteTypes {
     | '/'
     | '/adsense'
     | '/categories'
-    | '/search'
     | '/sitemap.xml'
     | '/category/$slug'
     | '/group/$slug'
@@ -106,7 +96,6 @@ export interface FileRouteTypes {
     | '/'
     | '/adsense'
     | '/categories'
-    | '/search'
     | '/sitemap.xml'
     | '/category/$slug'
     | '/group/$slug'
@@ -116,7 +105,6 @@ export interface FileRouteTypes {
     | '/'
     | '/adsense'
     | '/categories'
-    | '/search'
     | '/sitemap.xml'
     | '/category/$slug'
     | '/group/$slug'
@@ -127,7 +115,6 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AdsenseRoute: typeof AdsenseRoute
   CategoriesRoute: typeof CategoriesRoute
-  SearchRoute: typeof SearchRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   CategorySlugRoute: typeof CategorySlugRoute
   GroupSlugRoute: typeof GroupSlugRoute
@@ -141,13 +128,6 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/search': {
-      id: '/search'
-      path: '/search'
-      fullPath: '/search'
-      preLoaderRoute: typeof SearchRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/categories': {
@@ -199,7 +179,6 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AdsenseRoute: AdsenseRoute,
   CategoriesRoute: CategoriesRoute,
-  SearchRoute: SearchRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   CategorySlugRoute: CategorySlugRoute,
   GroupSlugRoute: GroupSlugRoute,
