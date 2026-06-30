@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as DisclaimerRouteImport } from './routes/disclaimer'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CategoriesRouteImport } from './routes/categories'
 import { Route as AdsenseRouteImport } from './routes/adsense'
@@ -34,6 +35,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const PrivacyRoute = PrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DisclaimerRoute = DisclaimerRouteImport.update({
+  id: '/disclaimer',
+  path: '/disclaimer',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -83,6 +89,7 @@ export interface FileRoutesByFullPath {
   '/adsense': typeof AdsenseRoute
   '/categories': typeof CategoriesRoute
   '/contact': typeof ContactRoute
+  '/disclaimer': typeof DisclaimerRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
@@ -96,6 +103,7 @@ export interface FileRoutesByTo {
   '/adsense': typeof AdsenseRoute
   '/categories': typeof CategoriesRoute
   '/contact': typeof ContactRoute
+  '/disclaimer': typeof DisclaimerRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
@@ -110,6 +118,7 @@ export interface FileRoutesById {
   '/adsense': typeof AdsenseRoute
   '/categories': typeof CategoriesRoute
   '/contact': typeof ContactRoute
+  '/disclaimer': typeof DisclaimerRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
@@ -125,6 +134,7 @@ export interface FileRouteTypes {
     | '/adsense'
     | '/categories'
     | '/contact'
+    | '/disclaimer'
     | '/privacy'
     | '/sitemap.xml'
     | '/terms'
@@ -138,6 +148,7 @@ export interface FileRouteTypes {
     | '/adsense'
     | '/categories'
     | '/contact'
+    | '/disclaimer'
     | '/privacy'
     | '/sitemap.xml'
     | '/terms'
@@ -151,6 +162,7 @@ export interface FileRouteTypes {
     | '/adsense'
     | '/categories'
     | '/contact'
+    | '/disclaimer'
     | '/privacy'
     | '/sitemap.xml'
     | '/terms'
@@ -165,6 +177,7 @@ export interface RootRouteChildren {
   AdsenseRoute: typeof AdsenseRoute
   CategoriesRoute: typeof CategoriesRoute
   ContactRoute: typeof ContactRoute
+  DisclaimerRoute: typeof DisclaimerRoute
   PrivacyRoute: typeof PrivacyRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TermsRoute: typeof TermsRoute
@@ -194,6 +207,13 @@ declare module '@tanstack/react-router' {
       path: '/privacy'
       fullPath: '/privacy'
       preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/disclaimer': {
+      id: '/disclaimer'
+      path: '/disclaimer'
+      fullPath: '/disclaimer'
+      preLoaderRoute: typeof DisclaimerRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -261,6 +281,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdsenseRoute: AdsenseRoute,
   CategoriesRoute: CategoriesRoute,
   ContactRoute: ContactRoute,
+  DisclaimerRoute: DisclaimerRoute,
   PrivacyRoute: PrivacyRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TermsRoute: TermsRoute,
