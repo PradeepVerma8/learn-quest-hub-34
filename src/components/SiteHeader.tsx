@@ -51,7 +51,7 @@ export function SiteHeader() {
             </DropdownMenuContent>
           </DropdownMenu>
           <Button variant="ghost" asChild>
-            <Link to="/adsense">Google AdSense</Link>
+            <Link to="/blog">Blog</Link>
           </Button>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -88,7 +88,7 @@ export function SiteHeader() {
         <div className="md:hidden border-t bg-card">
           <nav className="mx-auto max-w-7xl px-4 py-3 flex flex-col gap-1 text-sm">
             <Link to="/" onClick={() => setOpen(false)} className="px-2 py-2 rounded hover:bg-accent">Home</Link>
-            <Link to="/adsense" onClick={() => setOpen(false)} className="px-2 py-2 rounded hover:bg-accent">Google AdSense</Link>
+            <Link to="/blog" onClick={() => setOpen(false)} className="px-2 py-2 rounded hover:bg-accent">Blog</Link>
             <Link to="/contact" onClick={() => setOpen(false)} className="px-2 py-2 rounded hover:bg-accent">Contact Us</Link>
             <div className="mt-2 px-2 text-xs font-semibold uppercase text-muted-foreground">About</div>
             {aboutLinks.map((l) => (
