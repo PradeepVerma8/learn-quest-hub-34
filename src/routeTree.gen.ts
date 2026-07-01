@@ -14,12 +14,13 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as DisclaimerRouteImport } from './routes/disclaimer'
 import { Route as ContactRouteImport } from './routes/contact'
-import { Route as AdsenseRouteImport } from './routes/adsense'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as QuizSlugRouteImport } from './routes/quiz.$slug'
 import { Route as GroupSlugRouteImport } from './routes/group.$slug'
 import { Route as CategorySlugRouteImport } from './routes/category.$slug'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const TermsRoute = TermsRouteImport.update({
   id: '/terms',
@@ -46,9 +47,9 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AdsenseRoute = AdsenseRouteImport.update({
-  id: '/adsense',
-  path: '/adsense',
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -76,16 +77,22 @@ const CategorySlugRoute = CategorySlugRouteImport.update({
   path: '/category/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/adsense': typeof AdsenseRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/category/$slug': typeof CategorySlugRoute
   '/group/$slug': typeof GroupSlugRoute
   '/quiz/$slug': typeof QuizSlugRoute
@@ -93,12 +100,13 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/adsense': typeof AdsenseRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/category/$slug': typeof CategorySlugRoute
   '/group/$slug': typeof GroupSlugRoute
   '/quiz/$slug': typeof QuizSlugRoute
@@ -107,12 +115,13 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
-  '/adsense': typeof AdsenseRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/disclaimer': typeof DisclaimerRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/terms': typeof TermsRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/category/$slug': typeof CategorySlugRoute
   '/group/$slug': typeof GroupSlugRoute
   '/quiz/$slug': typeof QuizSlugRoute
@@ -122,12 +131,13 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
-    | '/adsense'
+    | '/blog'
     | '/contact'
     | '/disclaimer'
     | '/privacy'
     | '/sitemap.xml'
     | '/terms'
+    | '/blog/$slug'
     | '/category/$slug'
     | '/group/$slug'
     | '/quiz/$slug'
@@ -135,12 +145,13 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/about'
-    | '/adsense'
+    | '/blog'
     | '/contact'
     | '/disclaimer'
     | '/privacy'
     | '/sitemap.xml'
     | '/terms'
+    | '/blog/$slug'
     | '/category/$slug'
     | '/group/$slug'
     | '/quiz/$slug'
@@ -148,12 +159,13 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/about'
-    | '/adsense'
+    | '/blog'
     | '/contact'
     | '/disclaimer'
     | '/privacy'
     | '/sitemap.xml'
     | '/terms'
+    | '/blog/$slug'
     | '/category/$slug'
     | '/group/$slug'
     | '/quiz/$slug'
@@ -162,7 +174,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
-  AdsenseRoute: typeof AdsenseRoute
+  BlogRoute: typeof BlogRouteWithChildren
   ContactRoute: typeof ContactRoute
   DisclaimerRoute: typeof DisclaimerRoute
   PrivacyRoute: typeof PrivacyRoute
@@ -210,11 +222,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/adsense': {
-      id: '/adsense'
-      path: '/adsense'
-      fullPath: '/adsense'
-      preLoaderRoute: typeof AdsenseRouteImport
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -252,13 +264,30 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CategorySlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRoute
+    }
   }
 }
+
+interface BlogRouteChildren {
+  BlogSlugRoute: typeof BlogSlugRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogSlugRoute: BlogSlugRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
-  AdsenseRoute: AdsenseRoute,
+  BlogRoute: BlogRouteWithChildren,
   ContactRoute: ContactRoute,
   DisclaimerRoute: DisclaimerRoute,
   PrivacyRoute: PrivacyRoute,
