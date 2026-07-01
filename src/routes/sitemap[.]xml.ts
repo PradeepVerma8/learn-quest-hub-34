@@ -11,7 +11,6 @@ export const Route = createFileRoute("/sitemap.xml")({
       GET: async () => {
         const entries = [
           { path: "/", changefreq: "weekly", priority: "1.0" },
-          { path: "/categories", changefreq: "weekly", priority: "0.8" },
           ...groups.map((g) => ({
             path: `/group/${g.slug}`,
             changefreq: "weekly" as const,
