@@ -36,7 +36,7 @@ function Index() {
             <Link to="/group/$slug" params={{ slug: "it" }}>Explore IT</Link>
           </Button>
           <Button asChild size="lg" variant="outline">
-            <Link to="/categories">Browse all groups</Link>
+            <Link to="/group/$slug" params={{ slug: "it" }}>Browse all groups</Link>
           </Button>
         </div>
       </section>
@@ -44,7 +44,7 @@ function Index() {
       <section className="mb-10">
         <div className="flex items-baseline justify-between mb-4">
           <h2 className="text-xl font-semibold">Browse by Group</h2>
-          <Link to="/categories" className="text-sm text-primary hover:underline">View all</Link>
+          <span className="text-sm text-muted-foreground">All groups below</span>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {groups.map((g) => {
