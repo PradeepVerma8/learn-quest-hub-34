@@ -33,7 +33,7 @@ export const Route = createFileRoute("/category/$slug")({
   notFoundComponent: () => (
     <PageShell>
       <h1 className="text-2xl font-bold">Category not found</h1>
-      <Link to="/categories" className="text-primary hover:underline">Browse categories</Link>
+      <Link to="/" className="text-primary hover:underline">Back to home</Link>
     </PageShell>
   ),
   errorComponent: ({ reset }) => (
