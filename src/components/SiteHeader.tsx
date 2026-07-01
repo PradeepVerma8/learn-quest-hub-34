@@ -33,9 +33,6 @@ export function SiteHeader() {
           <Button variant="ghost" asChild>
             <Link to="/">Home</Link>
           </Button>
-          <Button variant="ghost" asChild>
-            <Link to="/categories">Categories</Link>
-          </Button>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="gap-1">
@@ -91,7 +88,6 @@ export function SiteHeader() {
         <div className="md:hidden border-t bg-card">
           <nav className="mx-auto max-w-7xl px-4 py-3 flex flex-col gap-1 text-sm">
             <Link to="/" onClick={() => setOpen(false)} className="px-2 py-2 rounded hover:bg-accent">Home</Link>
-            <Link to="/categories" onClick={() => setOpen(false)} className="px-2 py-2 rounded hover:bg-accent">Categories</Link>
             <Link to="/adsense" onClick={() => setOpen(false)} className="px-2 py-2 rounded hover:bg-accent">Google AdSense</Link>
             <Link to="/contact" onClick={() => setOpen(false)} className="px-2 py-2 rounded hover:bg-accent">Contact Us</Link>
             <div className="mt-2 px-2 text-xs font-semibold uppercase text-muted-foreground">About</div>
