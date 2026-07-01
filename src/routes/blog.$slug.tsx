@@ -2,7 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { PageShell } from "@/components/PageShell";
 import { BlogContent } from "@/components/BlogContent";
 import { BlogCard } from "@/components/BlogCard";
-import { getBlogPost, getRelatedPosts, slugifyHeading, blogPosts } from "@/data/blog";
+import { getBlogPost, getRelatedPosts, slugifyHeading, blogPosts, type BlogPost } from "@/data/blog";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Clock, User, Calendar, Tag, Share2 } from "lucide-react";
 
@@ -64,9 +64,9 @@ export const Route = createFileRoute("/blog/$slug")({
 });
 
 function BlogPostPage() {
-  const { post } = Route.useLoaderData();
+  const { post } = Route.useLoaderData() as { post: BlogPost };
   const related = getRelatedPosts(post, 3);
-  const headings = post.content.filter((b) => b.type === "h2") as Array<{ type: "h2"; text: string }>;
+  const headings = post.content.filter((b): b is { type: "h2"; text: string } => b.type === "h2");
   const url = typeof window !== "undefined" ? window.location.href : "";
 
   const shareLinks = [
